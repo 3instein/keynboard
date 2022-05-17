@@ -14,14 +14,7 @@ class BuildController extends Controller
      */
     public function index()
     {
-
-        if(isset(request()->code)){
-            $build = Build::firstWhere('code', request()->code);
-        }
-
-        return view('build',[
-            'build' => $build
-        ]);
+        return view('build.index');
     }
 
     /**
