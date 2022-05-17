@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('top_cases', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('build_id')
+                ->references('id')
+                ->on('build')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->string('code');
             $table->string('name');
             $table->integer('price');

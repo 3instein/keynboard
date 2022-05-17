@@ -24,6 +24,7 @@ Route::get('/', function () {
 // });
 
 Route::resource('build', BuildController::class);
+Route::post('/build', [BuildController::class, 'load'])->name('build.load');
 
 Route::middleware([
     'auth:sanctum',

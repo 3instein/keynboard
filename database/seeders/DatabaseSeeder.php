@@ -2,8 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\LayoutSeeder;
+use Database\Seeders\TopCaseSeeder;
+use Database\Seeders\BottomCaseSeeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +25,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            TopCaseSeeder::class,
+            BottomCaseSeeder::class,
+            LayoutSeeder::class,
             BuildSeeder::class
         ]);
     }

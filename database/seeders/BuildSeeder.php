@@ -17,32 +17,23 @@ class BuildSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        $top_case = TopCase::create([
-            'code' => 'A',
-            'name' => 'black',
-            'price' => 100  
-        ]);
+    { 
+        $top_cases = TopCase::all();
+        $bottom_cases = BottomCase::all();
+        $layouts = Layout::all();
 
-        $bottom_case = BottomCase::create([
-            'code' => 'A',
-            'name' => 'black',
-            'price' => 100  
-        ]);
-
-        $layout = Layout::create([
-            'code' => 'V0',
-            'name' => 'wkl-tkl',
-            'price' => 20  
-        ]);
-
-        $code = $layout->code . $top_case->code . $bottom_case->code;
-
-        Build::create([
-            'code' => $code,
-            'top_case_id' => 1,
-            'bottom_case_id' => 1,
-            'layout_id' => 1
-        ]);
+        foreach($top_cases as $top_case){
+            foreach($bottom_cases as $bottom_case){
+                foreach($layouts as $layout){
+                    $code = $layout->code . $top_case->code . $bottom_case->code;
+                    Build::create([
+                        'code' => $code,
+                        'top_case_id' => $top_case->id,
+                        'bottom_case_id' => $bottom_case->id,
+                        'layout_id' => $layout->id
+                    ]);
+                }
+            }
+        }
     }
 }
