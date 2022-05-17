@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Build;
+use App\Models\Layout;
+use App\Models\TopCase;
+use App\Models\BottomCase;
 use Illuminate\Http\Request;
 
 class BuildController extends Controller
@@ -14,7 +17,11 @@ class BuildController extends Controller
      */
     public function index()
     {
-        return view('build.index');
+        return view('build.index', [
+            'top_cases' => TopCase::all(),
+            'bottom_cases' => BottomCase::all(),
+            'layouts' => Layout::all()
+        ]);
     }
 
     /**
@@ -35,7 +42,8 @@ class BuildController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $top_case = TopCase::where('name', $request->top_case);
+        return $top_case;
     }
 
     /**
