@@ -7,7 +7,8 @@
           <div>
             <caption>
               <p class="text-9xl uppercase text-base tracking-widest">Key&Board</p>
-              <p class="text-4xl uppercase text-base font-bold tracking-widest mt-4">Customizable mechanical keyboard</p>
+              <p class="text-4xl uppercase text-base font-extrabold tracking-widest mt-4">Customizable mechanical
+                keyboard</p>
             </caption>
           </div>
           <div class="mt-16">
@@ -28,6 +29,28 @@
 
   {{-- about us --}}
   <section name="about-us">
+    <div class="text-center py-20 bg-slate-100 bg-opacity-20">
+      <div class="grid place-items-center">
+        <div class="border-b-2 border-b-base">
+          <p class="text-3xl uppercase text-base tracking-widest font-extrabold mb-4">About us</p>
+        </div>
+        <div class="w-5/12 mt-8">
+          <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
+            semper dictum. Aenean
+            feugiat maximus nisl, id condimentum tellus sodales sit amet. Integer in molestie sapien, ut pharetra lorem.
+            Pellentesque laoreet ipsum nec vulputate porttitor. Aliquam ut molestie ex, eget vehicula lectus. Donec
+            condimentum risus ut faucibus molestie. Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Vestibulum a elit at nisl consectetur rutrum. Etiam cursus lobortis odio porttitor
+            placerat. Pellentesque sed vulputate arcu. Ut condimentum sed enim pharetra iaculis. Fusce finibus nulla
+            nulla, ac ultrices augue egestas nec. Aenean sollicitudin justo ac dolor efficitur ullamcorper.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- spesification section --}}
+  <section name="spesification">
 
   </section>
 </x-app-layout>
