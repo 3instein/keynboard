@@ -9,4 +9,8 @@ class BottomCase extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function builds(){
+        return $this->hasMany(Build::class); 
+    }
 }

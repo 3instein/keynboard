@@ -6,12 +6,13 @@ use App\Models\Build;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Layout extends Model
+class Order extends Model
 {
     use HasFactory;
+
     protected $guarded = ['id'];
 
-    public function builds(){
-        return $this->hasMany(Build::class);
+    public function build(){
+        return $this->belongsTo(Build::class);
     }
 }

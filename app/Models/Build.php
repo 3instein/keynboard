@@ -16,7 +16,19 @@ class Build extends Model
         return 'code';
     }
 
-    public function topCase(){
-        return $this->hasOne(TopCase::class);
+    public function top_case(){
+        return $this->belongsTo(TopCase::class);
+    }
+
+    public function bottom_case(){
+        return $this->belongsTo(BottomCase::class);
+    }
+
+    public function layout(){
+        return $this->belongsTo(Layout::class);
+    }
+
+    public function orders(){
+        return $this->hasMany(Order::class);
     }
 }

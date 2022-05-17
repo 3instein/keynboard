@@ -13,6 +13,6 @@ class TopCase extends Model
     protected $guarded = ['id'];
 
     public function builds(){
-        return $this->belongsTo(Build::class); 
+        return $this->hasMany(Build::class); 
     }
 }
