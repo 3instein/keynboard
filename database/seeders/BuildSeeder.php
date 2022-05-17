@@ -18,17 +18,22 @@ class BuildSeeder extends Seeder
      */
     public function run()
     { 
-        $top_case = TopCase::find(1);
-        $bottom_case = BottomCase::find(1);
-        $layout = Layout::find(1);
+        $top_cases = TopCase::all();
+        $bottom_cases = BottomCase::all();
+        $layouts = Layout::all();
 
-        $code = $layout->code . $top_case->code . $bottom_case->code;
-
-        Build::create([
-            'code' => $code,
-            'top_case_id' => 1,
-            'bottom_case_id' => 1,
-            'layout_id' => 1
-        ]);
+        foreach($top_cases as $top_case){
+            foreach($bottom_cases as $bottom_case){
+                foreach($layouts as $layout){
+                    $code = $layout->code . $top_case->code . $bottom_case->code;
+                    Build::create([
+                        'code' => $code,
+                        'top_case_id' => $top_case->id,
+                        'bottom_case_id' => $bottom_case->id,
+                        'layout_id' => $layout->id
+                    ]);
+                }
+            }
+        }
     }
 }

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('builds', function (Blueprint $table) {
             $table->id();
-            $table->string('code');
+            $table->string('code')->unique();
             $table->foreignId('top_case_id')
                 ->references('id')
                 ->on('top_cases')
