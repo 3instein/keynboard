@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Build;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BuildController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+// Route::get('/build', function (){
+//     return view('build');
+// });
+
+Route::resource('build', BuildController::class);
 
 Route::middleware([
     'auth:sanctum',
