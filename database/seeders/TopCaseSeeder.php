@@ -15,10 +15,19 @@ class TopCaseSeeder extends Seeder
      */
     public function run()
     {
-        TopCase::create([
-            'code' => 'A',
-            'name' => 'Black',
-            'price' => 100  
-        ]);
+        $top_cases = [
+            [
+                'code' => 'A',
+                'name' => 'Black',
+                'price' => 100  
+            ],
+            [
+                'code' => 'B',
+                'name' => 'White (Frosted)',
+                'price' => 100
+            ]
+        ];
+
+        TopCase::insert($top_cases);
     }
 }

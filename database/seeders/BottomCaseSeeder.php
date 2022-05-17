@@ -15,10 +15,19 @@ class BottomCaseSeeder extends Seeder
      */
     public function run()
     {
-        BottomCase::create([
-            'code' => 'A',
-            'name' => 'Black',
-            'price' => 100  
-        ]);
+        $bottom_cases = [
+            [
+                'code' => 'A',
+                'name' => 'Black',
+                'price' => 100  
+            ],
+            [
+                'code' => 'B',
+                'name' => 'White (Frosted)',
+                'price' => 100
+            ]
+        ];
+
+        BottomCase::insert($bottom_cases);
     }
 }
