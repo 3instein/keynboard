@@ -104,6 +104,50 @@
 
   {{-- how to section --}}
   <section name="how-to">
-
+    <div class="grid place-items-center">
+      <div class="border-b-2 border-b-base w-fit">
+        <p class="text-3xl uppercase text-base tracking-widest font-extrabold mb-4">Build your own: How to</p>
+      </div>
+      <div class="mt-8 flex items-center justify-evenly w-4/5">
+        <div class="text-center grid place-items-center">
+          <div>
+            <p class="text-base font-extrabold">Step 1</p>
+          </div>
+          <div class="w-3/4">
+            <p class="text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
+              semper dictum.
+            </p>
+          </div>
+        </div>
+        <div class="text-center grid place-items-center">
+          <div>
+            <p class="text-base font-extrabold">Step 2</p>
+          </div>
+          <div class="w-3/4">
+            <p class="text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
+              semper dictum.
+            </p>
+          </div>
+        </div>
+        <div class="text-center grid place-items-center">
+          <div>
+            <p class="text-base font-extrabold">Step 3</p>
+          </div>
+          <div class="w-3/4">
+            <p class="text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
+              semper dictum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16">
+        <button
+          class="border-2 border-base-gold px-6 py-3 uppercase tracking-widest font-bold text-base-gold hover:bg-base-gold hover:text-white">Start
+          building your keyboard</button>
+      </div>
+    </div>
   </section>
 </x-app-layout>

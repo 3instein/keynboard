@@ -1210,6 +1210,9 @@ select {
 .w-1\/4 {
   width: 25%;
 }
+.w-4\/5 {
+  width: 80%;
+}
 .min-w-0 {
   min-width: 0px;
 }
@@ -1302,6 +1305,12 @@ select {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
 }
 .justify-items-center {
   justify-items: center;
