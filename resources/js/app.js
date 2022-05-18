@@ -21,7 +21,7 @@ Alpine.start();
     }, 100);
     setTimeout(function () {
       cta.classList.remove('opacity-0');
-    }, 300);
+    }, 450);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);
