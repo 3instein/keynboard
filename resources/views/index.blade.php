@@ -11,11 +11,7 @@
                 keyboard</p>
             </caption>
           </div>
-          <div class="mt-16">
-            <button
-              class="border-2 border-base-gold px-6 py-3 uppercase tracking-widest font-bold text-base-gold hover:bg-base-gold hover:text-white">Start
-              building your keyboard</button>
-          </div>
+          @include('components.cta-btn')
         </div>
         <div class="absolute -top-48 -right-32">
           <img class="h-auto w-[1024px]" src="/images/keeb-hero2.png" alt="keeb2">
@@ -143,11 +139,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-16">
-        <button
-          class="border-2 border-base-gold px-6 py-3 uppercase tracking-widest font-bold text-base-gold hover:bg-base-gold hover:text-white">Start
-          building your keyboard</button>
-      </div>
+      @include('components.cta-btn')
     </div>
   </section>
 

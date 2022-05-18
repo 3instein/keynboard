@@ -1,3 +1,31 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.cta {
+  transition: 0.8s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+.cta-fill:hover {
+  color: white;
+}
+
+.cta-fill::before {
+  content: '';
+  position: absolute;
+  background-color: #F5BF8A;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: left 0.09s ease-in;
+}
+
+.cta-fill:hover::before {
+  left: 0;
+}
