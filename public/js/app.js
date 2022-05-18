@@ -5097,7 +5097,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
     }, 100);
     setTimeout(function () {
       cta.classList.remove('opacity-0');
-    }, 300);
+    }, 900);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);
