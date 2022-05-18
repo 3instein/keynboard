@@ -4,7 +4,8 @@
     <div class="pl-20">
       <div class="flex items-center justify-between min-h-screen">
         <div>
-          <div>
+          <div class="caption">
+            <div class="caption-cover"></div>
             <caption>
               <p class="text-9xl uppercase text-base tracking-widest">Key&Board</p>
               <p class="text-4xl uppercase text-base font-extrabold tracking-widest mt-4">Customizable mechanical
