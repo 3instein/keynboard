@@ -24,8 +24,9 @@
 
 .cta-cover {
   position: absolute;
-  left: 0;
+  right: 100%;
   height: 100%;
+  width: 100%;
   background-color: red;
   z-index: 5;
   animation: fillIn 1.8s ease-in-out;
@@ -60,16 +61,15 @@
 }
 
 @keyframes fillIn {
-  0% {
-    width: 0;
+  25% {
+    right: 100%;
   }
 
-  20% {
-    width: 100%;
+  50% {
+    right: 0%;
   }
 
   100% {
-    left: 100%;
-    width: 100%;
+    right: -100%;
   }
 }
