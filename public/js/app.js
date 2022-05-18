@@ -5089,12 +5089,15 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var navbarHeight = navbar.offsetHeight;
   var caption = document.querySelector('.caption');
   var captionCover = document.querySelector('.caption-cover');
-  var ctaWrapper = document.querySelector('.cta-wrapper'); // animation on window load
+  var cta = document.querySelector('.cta'); // animation on window load
 
   window.addEventListener('load', function () {
     setTimeout(function () {
       caption.style.right = '0';
     }, 100);
+    setTimeout(function () {
+      cta.classList.remove('opacity-0');
+    }, 300);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);
