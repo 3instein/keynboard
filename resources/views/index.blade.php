@@ -33,21 +33,14 @@
         </div>
         <div class="w-5/12 mt-8">
           <p class="text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
-            semper dictum. Aenean
-            feugiat maximus nisl, id condimentum tellus sodales sit amet. Integer in molestie sapien, ut pharetra lorem.
-            Pellentesque laoreet ipsum nec vulputate porttitor. Aliquam ut molestie ex, eget vehicula lectus. Donec
-            condimentum risus ut faucibus molestie. Orci varius natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Vestibulum a elit at nisl consectetur rutrum. Etiam cursus lobortis odio porttitor
-            placerat. Pellentesque sed vulputate arcu. Ut condimentum sed enim pharetra iaculis. Fusce finibus nulla
-            nulla, ac ultrices augue egestas nec. Aenean sollicitudin justo ac dolor efficitur ullamcorper.
+            We are a custom keyboard designer based in Indonesia that strives to provide accessible and customized keyboard that suits you like a glove. Furthermore, in each of our design we want to declare our design language and character.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  {{-- spesification section --}}
+  {{-- Kit section --}}
   <section name="spesification">
     <div class="grid place-items-center my-40">
       <div class="flex items-center justify-center">
@@ -56,40 +49,39 @@
         </div>
         <div class="w-1/3">
           <div class="border-b-2 border-b-base w-fit">
-            <p class="text-3xl uppercase text-base tracking-widest font-extrabold mb-4">Keyboard spesification</p>
+            <p class="text-3xl uppercase text-base tracking-widest font-extrabold mb-4">Keyboard Kit</p>
           </div>
           <div class="mt-8">
-            <p class="text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
-              semper dictum. Aenean
-              feugiat maximus nisl, id condimentum tellus sodales sit amet. Integer in molestie sapien, ut pharetra
-              lorem.
-              Pellentesque laoreet ipsum nec vulputate porttitor. Aliquam ut molestie ex, eget vehicula lectus. Donec
-              condimentum risus ut faucibus molestie. Orci varius natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Vestibulum a elit at nisl consectetur rutrum. Etiam cursus lobortis odio porttitor
-              placerat. Pellentesque sed vulputate arcu. Ut condimentum sed enim pharetra iaculis. Fusce finibus nulla
-              nulla, ac ultrices augue egestas nec. Aenean sollicitudin justo ac dolor efficitur ullamcorper.
-            </p>
+            <div class="text-base">
+              <ul>
+                <li>Aluminium top & bottom case</li>
+                <li>Aluminium or SS external weight</li>
+                <li>Aliminium or brass rotary knob matching the external weight</li>
+                <li>Hot-swap PCB with USB-C daughterboard</li>
+                <li>Polycarbonate plate</li>
+                <li>Gaskets</li>
+                <li>Screws and accessories</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+      {{-- Specification section --}}
       <div class="flex items-center justify-center mt-40">
         <div class="w-1/3">
           <div class="border-b-2 border-b-base w-fit">
-            <p class="text-3xl uppercase text-base tracking-widest font-extrabold mb-4">Choice of materials</p>
+            <p class="text-3xl uppercase text-base tracking-widest font-extrabold mb-4">Keyboard Specification</p>
           </div>
           <div class="mt-8">
-            <p class="text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
-              semper dictum. Aenean
-              feugiat maximus nisl, id condimentum tellus sodales sit amet. Integer in molestie sapien, ut pharetra
-              lorem.
-              Pellentesque laoreet ipsum nec vulputate porttitor. Aliquam ut molestie ex, eget vehicula lectus. Donec
-              condimentum risus ut faucibus molestie. Orci varius natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Vestibulum a elit at nisl consectetur rutrum. Etiam cursus lobortis odio porttitor
-              placerat. Pellentesque sed vulputate arcu. Ut condimentum sed enim pharetra iaculis. Fusce finibus nulla
-              nulla, ac ultrices augue egestas nec. Aenean sollicitudin justo ac dolor efficitur ullamcorper.
-            </p>
+            <div class="text-base">
+              <ul>
+                <li>65% with rotary knob layout</li>
+                <li>Full isolation gasket mount system</li>
+                <li>7.0° typing angle</li>
+                <li>18mm front height</li>
+                <li>PCB QMK/VIA compatible</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="ml-32">
@@ -112,8 +104,7 @@
           </div>
           <div class="w-3/4">
             <p class="text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
-              semper dictum.
+              Configure your build using our configurator.
             </p>
           </div>
         </div>
@@ -123,8 +114,7 @@
           </div>
           <div class="w-3/4">
             <p class="text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
-              semper dictum.
+              Add your configured build to the cart and order it.
             </p>
           </div>
         </div>
@@ -134,8 +124,7 @@
           </div>
           <div class="w-3/4">
             <p class="text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis urna eu
-              semper dictum.
+              Wait and sit still for the fullfillment.
             </p>
           </div>
         </div>
