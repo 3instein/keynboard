@@ -1,6 +1,6 @@
 
 <h1>Build</h1>
-<form action="{{ route('build.store') }}" method="POST">
+<form action="#" method="POST">
     @csrf
     <div class="top">
         <label for="top_case">Top Case</label>

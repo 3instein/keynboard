@@ -33,7 +33,9 @@
         </div>
         <div class="w-5/12 mt-8">
           <p class="text-base">
-            We are a custom keyboard designer based in Indonesia that strives to provide accessible and customized keyboard that suits you like a glove. Furthermore, in each of our design we want to declare our design language and character.
+            We are a custom keyboard designer based in Indonesia that strives to provide accessible and customized
+            keyboard that suits you like a glove. Furthermore, in each of our design we want to declare our design
+            language and character.
           </p>
         </div>
       </div>
@@ -134,28 +136,5 @@
   </section>
 
   {{-- footer --}}
-  <footer class="mt-20 bg-dark pt-20">
-    <div class="grid place-items-center">
-      <div>
-        <div>
-          <img class="h-auto w-32" src="/images/gold-logo.png" alt="Logo">
-        </div>
-        <div class="flex items-center justify-evenly mt-8">
-          <div>
-            <a href="">
-              <img class="h-auto w-6" src="/icons/instagram.png" alt="instagram logo">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img class="h-auto w-6" src="/icons/discord.png" alt="discord logo">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="py-8 text-center">
-      <p class="text-white">Copyright © 2022 Key&Board</p>
-    </div>
-  </footer>
+  @include('components.footer')
 </x-app-layout>
