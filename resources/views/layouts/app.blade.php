@@ -21,13 +21,14 @@
   <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased {{ request()->is('/') ? 'overflow-x-hidden' : '' }}">
+<body class="font-sans antialiased overflow-hidden {{ request()->is('/') ? 'overflow-x-hidden' : '' }}">
   @include('components.navigation')
   <div class="min-h-screen">
     <main class="app">
       {{ $slot }}
     </main>
   </div>
+  @include('components.footer')
   @livewireScripts
   @stack('prepend-script')
   @stack('addon-script')

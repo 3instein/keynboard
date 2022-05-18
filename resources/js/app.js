@@ -13,9 +13,16 @@ Alpine.start();
   const caption = document.querySelector('.caption');
   const captionCover = document.querySelector('.caption-cover');
   const ctas = document.querySelectorAll('.cta');
+  const keebHero1 = document.querySelector('.keeb-hero-1');
+  const keebHero2 = document.querySelector('.keeb-hero-2');
+  const body = document.querySelector('body');
 
   // animation on window load
   window.addEventListener('load', () => {
+    body.classList.remove('overflow-hidden');
+    keebHero1.style.right = '-3rem';
+    keebHero2.style.right = '-8rem';
+
     setTimeout(function () {
       caption.style.right = '0';
     }, 100);
@@ -23,7 +30,7 @@ Alpine.start();
       for (let i = 0; i < ctas.length; i++) {
         ctas[i].classList.remove('opacity-0');
       }
-    }, 600);
+    }, 350);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);
