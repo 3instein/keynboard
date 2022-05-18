@@ -12,9 +12,13 @@ Alpine.start();
   const navbarHeight = navbar.offsetHeight;
   const caption = document.querySelector('.caption');
   const captionCover = document.querySelector('.caption-cover');
+  const ctaWrapper = document.querySelector('.cta-wrapper');
 
   // animation on window load
   window.addEventListener('load', () => {
+    setTimeout(function () {
+      caption.style.right = '0';
+    }, 100);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);
