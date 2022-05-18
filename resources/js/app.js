@@ -12,7 +12,7 @@ Alpine.start();
   const navbarHeight = navbar.offsetHeight;
   const caption = document.querySelector('.caption');
   const captionCover = document.querySelector('.caption-cover');
-  const cta = document.querySelector('.cta');
+  const ctas = document.querySelectorAll('.cta');
 
   // animation on window load
   window.addEventListener('load', () => {
@@ -20,8 +20,10 @@ Alpine.start();
       caption.style.right = '0';
     }, 100);
     setTimeout(function () {
-      cta.classList.remove('opacity-0');
-    }, 900);
+      for (let i = 0; i < ctas.length; i++) {
+        ctas[i].classList.remove('opacity-0');
+      }
+    }, 600);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);

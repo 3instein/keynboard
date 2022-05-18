@@ -5089,15 +5089,17 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var navbarHeight = navbar.offsetHeight;
   var caption = document.querySelector('.caption');
   var captionCover = document.querySelector('.caption-cover');
-  var cta = document.querySelector('.cta'); // animation on window load
+  var ctas = document.querySelectorAll('.cta'); // animation on window load
 
   window.addEventListener('load', function () {
     setTimeout(function () {
       caption.style.right = '0';
     }, 100);
     setTimeout(function () {
-      cta.classList.remove('opacity-0');
-    }, 900);
+      for (var i = 0; i < ctas.length; i++) {
+        ctas[i].classList.remove('opacity-0');
+      }
+    }, 600);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);
