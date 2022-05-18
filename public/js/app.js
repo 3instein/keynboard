@@ -5088,9 +5088,13 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var navbar = document.querySelector('.navbar');
   var navbarHeight = navbar.offsetHeight;
   var caption = document.querySelector('.caption');
-  var captionCover = document.querySelector('.caption-cover'); // animation on window load
+  var captionCover = document.querySelector('.caption-cover');
+  var ctaWrapper = document.querySelector('.cta-wrapper'); // animation on window load
 
   window.addEventListener('load', function () {
+    setTimeout(function () {
+      caption.style.right = '0';
+    }, 100);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);
