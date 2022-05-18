@@ -5082,6 +5082,31 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
+(function () {
+  'use strict';
+
+  var navbar = document.querySelector('.navbar');
+  var navbarHeight = navbar.offsetHeight;
+  var caption = document.querySelector('.caption');
+  var captionCover = document.querySelector('.caption-cover'); // animation on window load
+
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      captionCover.style.right = '100%';
+    }, 250);
+  }); // change navbar color on scroll
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > navbarHeight) {
+      navbar.classList.add('bg-white');
+    }
+
+    if (window.scrollY < navbarHeight) {
+      navbar.classList.remove('bg-white');
+    }
+  });
+})();
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
