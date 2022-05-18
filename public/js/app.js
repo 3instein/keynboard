@@ -5091,9 +5091,11 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var captionCover = document.querySelector('.caption-cover');
   var ctas = document.querySelectorAll('.cta');
   var keebHero1 = document.querySelector('.keeb-hero-1');
-  var keebHero2 = document.querySelector('.keeb-hero-2'); // animation on window load
+  var keebHero2 = document.querySelector('.keeb-hero-2');
+  var body = document.querySelector('body'); // animation on window load
 
   window.addEventListener('load', function () {
+    body.classList.remove('overflow-hidden');
     keebHero1.style.right = '-3rem';
     keebHero2.style.right = '-8rem';
     setTimeout(function () {

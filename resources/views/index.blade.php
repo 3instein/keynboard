@@ -46,7 +46,7 @@
   <section name="spesification">
     <div class="grid place-items-center my-40">
       <div class="flex items-center justify-center">
-        <div class="mr-32">
+        <div class="mr-48">
           <img class="h-auto w-96" src="/images/keeb1.png" alt="keeb1">
         </div>
         <div class="w-1/3">
@@ -86,7 +86,7 @@
             </div>
           </div>
         </div>
-        <div class="ml-32">
+        <div class="ml-48">
           <img class="h-auto w-96" src="/images/keeb1.png" alt="keeb1">
         </div>
       </div>

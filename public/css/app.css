@@ -1072,6 +1072,18 @@ select {
 .ml-32 {
   margin-left: 8rem;
 }
+.mr-40 {
+  margin-right: 10rem;
+}
+.ml-40 {
+  margin-left: 10rem;
+}
+.mr-48 {
+  margin-right: 12rem;
+}
+.ml-48 {
+  margin-left: 12rem;
+}
 .block {
   display: block;
 }
