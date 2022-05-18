@@ -5089,9 +5089,13 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var navbarHeight = navbar.offsetHeight;
   var caption = document.querySelector('.caption');
   var captionCover = document.querySelector('.caption-cover');
-  var ctas = document.querySelectorAll('.cta'); // animation on window load
+  var ctas = document.querySelectorAll('.cta');
+  var keebHero1 = document.querySelector('.keeb-hero-1');
+  var keebHero2 = document.querySelector('.keeb-hero-2'); // animation on window load
 
   window.addEventListener('load', function () {
+    keebHero1.style.right = '-3rem';
+    keebHero2.style.right = '-8rem';
     setTimeout(function () {
       caption.style.right = '0';
     }, 100);
@@ -5099,7 +5103,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
       for (var i = 0; i < ctas.length; i++) {
         ctas[i].classList.remove('opacity-0');
       }
-    }, 600);
+    }, 350);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);

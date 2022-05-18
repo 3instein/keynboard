@@ -28,6 +28,7 @@
       {{ $slot }}
     </main>
   </div>
+  @include('components.footer')
   @livewireScripts
   @stack('prepend-script')
   @stack('addon-script')

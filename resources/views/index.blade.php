@@ -14,10 +14,10 @@
           </div>
           @include('components.cta-btn')
         </div>
-        <div class="absolute -top-48 -right-32">
+        <div class="absolute -top-48 right-24 keeb-hero-2">
           <img class="h-auto w-[1024px]" src="/images/keeb-hero2.png" alt="keeb2">
         </div>
-        <div class="absolute bottom-0 -right-16">
+        <div class="absolute bottom-0 -right-72 keeb-hero-1">
           <img class="h-auto w-[896px]" src="/images/keeb-hero1.png" alt="keeb1">
         </div>
       </div>
@@ -134,7 +134,4 @@
       @include('components.cta-btn')
     </div>
   </section>
-
-  {{-- footer --}}
-  @include('components.footer')
 </x-app-layout>
