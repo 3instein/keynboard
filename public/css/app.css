@@ -1851,6 +1851,9 @@ select {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
+.ease-linear {
+  transition-timing-function: linear;
+}
 .cta {
   transition: 0.8s ease-in;
   -o-transition: 0.08s ease-in;

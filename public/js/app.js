@@ -5082,6 +5082,21 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
+(function () {
+  // change navbar color on scroll
+  var navbar = document.querySelector('.navbar');
+  var navbarHeight = navbar.offsetHeight;
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > navbarHeight) {
+      navbar.classList.add('bg-white');
+    }
+
+    if (window.scrollY < navbarHeight) {
+      navbar.classList.remove('bg-white');
+    }
+  });
+})();
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
