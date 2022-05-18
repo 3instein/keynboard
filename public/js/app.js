@@ -5099,7 +5099,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
       for (var i = 0; i < ctas.length; i++) {
         ctas[i].classList.remove('opacity-0');
       }
-    }, 600);
+    }, 900);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);

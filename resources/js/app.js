@@ -23,7 +23,7 @@ Alpine.start();
       for (let i = 0; i < ctas.length; i++) {
         ctas[i].classList.remove('opacity-0');
       }
-    }, 600);
+    }, 900);
     setTimeout(function () {
       captionCover.style.right = '100%';
     }, 250);
