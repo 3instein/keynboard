@@ -3,6 +3,7 @@
 use App\Models\Build;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BuildController;
+use App\Http\Controllers\InterestCheckController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::get('/', function () {
 // });
 
 Route::resource('build', BuildController::class);
+Route::resource('interest-check', InterestCheckController::class);
 Route::post('/build', [BuildController::class, 'load'])->name('build.load');
 
 Route::middleware([

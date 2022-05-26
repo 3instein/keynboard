@@ -1,5 +1,5 @@
 <x-app-layout>
-  <div>
+  <div class="grid place-items-center min-h-screen">
     <h1>Build</h1>
     <form action="#" method="POST">
       @csrf
