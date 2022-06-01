@@ -64,9 +64,11 @@ Alpine.start();
       if (value == 'instagram') {
         instagramInput.classList.remove('hidden');
         discordInput.classList.add('hidden');
+        document.getElementById('disc-input').name = '';
       } else if (value == 'discord') {
         instagramInput.classList.add('hidden');
         discordInput.classList.remove('hidden');
+        document.getElementById('insta-input').name = '';
       }
     });
   }

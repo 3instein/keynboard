@@ -31,35 +31,36 @@ class InterestCheckController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        $validatedData = $request->validate([
-            'community' => ['required'],
-            'username' => ['required', 'max:255'],
-            'layout' => ['required'],
-            'color' => ['required'],
-            'plate' => ['required'],
-            'bottom-row' => ['required'],
-        ]);
+        return $request;
+        // $validatedData = $request->validate([
+        //     'community' => ['required'],
+        //     'username' => ['required', 'max:255'],
+        //     'layout' => ['required'],
+        //     'color' => ['required'],
+        //     'plate' => ['required'],
+        //     'bottom-row' => ['required'],
+        // ]);
 
-        if($request->input('community') == 'discord'){
-            $username = $request->input('username').'#'.$request->input('id');
-        } else if($request->input('community') == 'instagram') {
-            $username = '@'.$request->input('username');
-        }
+        // if($request->input('community') == 'discord'){
+        //     $username = $request->input('username').'#'.$request->input('id');
+        // } else if($request->input('community') == 'instagram') {
+        //     $username = '@'.$request->input('username');
+        // }
         
-        $responses = json_encode([
-            'layout' => $request->input('layout'),
-            'preferred_colors' => $request->input('color'),
-            'preferred_plate' => $request->input('plate'),
-            'bottom_row' => $request->input('bottom-row')
-        ]);
+        // $responses = json_encode([
+        //     'layout' => $request->input('layout'),
+        //     'preferred_colors' => $request->input('color'),
+        //     'preferred_plate' => $request->input('plate'),
+        //     'bottom_row' => $request->input('bottom-row')
+        // ]);
 
-        $interestCheck = [
-            'community' => $request->input('community'),
-            'username' => $username,
-            'responses' => $responses
-        ];
+        // $interestCheck = [
+        //     'community' => $request->input('community'),
+        //     'username' => $username,
+        //     'responses' => $responses
+        // ];
 
-        InterestCheck::create($interestCheck);
+        // InterestCheck::create($interestCheck);
     }
 
     /**

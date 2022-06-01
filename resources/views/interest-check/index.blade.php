@@ -55,7 +55,7 @@
               <span
                 class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">@</span>
               <input class="flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" type="text"
-                name="username">
+                name="username" id="insta-input">
             </div>
           </div>
 
@@ -64,7 +64,7 @@
             <label class="font-semibold" for="username">Your username on that platform</label>
             <div class="flex rounded-md shadow-sm">
               <input class="flex-1 block w-full rounded-none rounded-l-md sm:text-sm border-gray-300" type="text"
-                name="username">
+                name="username" id="disc-input">
               <span
                 class="inline-flex items-center px-3 border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">#</span>
               <input class="rounded-r-md sm:text-sm border-gray-300 w-20" type="number" name="id" id="discord-id">
