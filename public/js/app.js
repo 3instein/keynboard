@@ -5096,6 +5096,11 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var community = document.querySelectorAll('#community');
   var instagramInput = document.querySelector('.instagram-input');
   var discordInput = document.querySelector('.discord-input');
+  var modal = document.querySelector('.modal');
+  var modalBg = document.querySelector('.modal-bg');
+  var modalPanel = document.querySelector('.modal-panel');
+  var layoutInfo = document.querySelector('.layout-info');
+  var cancelBtn = document.querySelector('.cancel-btn');
   var waitlist = document.querySelector('#waitlist');
   var waitlistForm = document.querySelector('.waitlist-form'); // animation on window load
 
@@ -5142,8 +5147,20 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
   for (var i = 0; i < community.length; i++) {
     _loop(i);
-  } // waiting list form
+  } // layout info
 
+
+  layoutInfo.addEventListener('click', function () {
+    modal.classList.remove('hidden');
+    modalBg.style.transition = 'all .3s ease-out';
+    modalBg.style.animation = 'modalBgIn .3s ease-out';
+    modalPanel.style.transition = 'all .3s ease-out';
+    modalPanel.style.animation = 'modalBgIn .3s ease-out';
+  }); // cancel
+
+  cancelBtn.addEventListener('click', function () {
+    modal.classList.add('hidden');
+  }); // waiting list form
 
   waitlist.addEventListener('click', function () {
     var checked = waitlist.checked;

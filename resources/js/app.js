@@ -19,6 +19,11 @@ Alpine.start();
   const community = document.querySelectorAll('#community');
   const instagramInput = document.querySelector('.instagram-input');
   const discordInput = document.querySelector('.discord-input');
+  const modal = document.querySelector('.modal');
+  const modalBg = document.querySelector('.modal-bg');
+  const modalPanel = document.querySelector('.modal-panel');
+  const layoutInfo = document.querySelector('.layout-info');
+  const cancelBtn = document.querySelector('.cancel-btn');
   const waitlist = document.querySelector('#waitlist');
   const waitlistForm = document.querySelector('.waitlist-form');
 
@@ -65,6 +70,20 @@ Alpine.start();
       }
     });
   }
+
+  // layout info
+  layoutInfo.addEventListener('click', function () {
+    modal.classList.remove('hidden');
+    modalBg.style.transition = 'all .3s ease-out';
+    modalBg.style.animation = 'modalBgIn .3s ease-out';
+    modalPanel.style.transition = 'all .3s ease-out';
+    modalPanel.style.animation = 'modalBgIn .3s ease-out';
+  });
+
+  // cancel
+  cancelBtn.addEventListener('click', function () {
+    modal.classList.add('hidden');
+  });
 
   // waiting list form
   waitlist.addEventListener('click', function () {
