@@ -40,11 +40,9 @@ class InterestCheckController extends Controller {
             'bottom-row' => ['required'],
         ]);
         
-        $colors = $request->input('color');
-
         $responses = json_encode([
             'layout' => $request->input('layout'),
-            'preferred_colors' => $colors,
+            'preferred_colors' => $request->input('color'),
             'preferred_plate' => $request->input('plate'),
             'bottom_row' => $request->input('bottom-row')
         ]);
