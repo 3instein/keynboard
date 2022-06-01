@@ -24,7 +24,7 @@
   <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased overflow-hidden {{ request()->is('/') ? 'overflow-x-hidden' : '' }}">
+<body class="font-sans antialiased overflow-hidden {{ request()->is('/') ? 'overflow-x-hidden' : '' }} {{ request()->is('interest-check') ? 'bg-slate-100' : '' }}">
   @include('components.navigation')
   <div class="min-h-screen">
     <main class="app">

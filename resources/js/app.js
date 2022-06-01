@@ -16,6 +16,8 @@ Alpine.start();
   const keebHero1 = document.querySelector('.keeb-hero-1');
   const keebHero2 = document.querySelector('.keeb-hero-2');
   const body = document.querySelector('body');
+  const waitlist = document.querySelector('#waitlist');
+  const waitlistForm = document.querySelector('.waitlist-form');
 
   // animation on window load
   window.addEventListener('load', () => {
@@ -44,6 +46,17 @@ Alpine.start();
 
     if (window.scrollY < navbarHeight) {
       navbar.classList.remove('bg-white');
+    }
+  });
+
+  // waiting list form
+  // check if checkbox checked
+  waitlist.addEventListener('click', function () {
+    const checked = waitlist.checked;
+    if (checked) {
+      waitlistForm.classList.remove('hidden');
+    } else {
+      waitlistForm.classList.add('hidden');
     }
   });
 })();

@@ -5092,7 +5092,9 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var ctas = document.querySelectorAll('.cta');
   var keebHero1 = document.querySelector('.keeb-hero-1');
   var keebHero2 = document.querySelector('.keeb-hero-2');
-  var body = document.querySelector('body'); // animation on window load
+  var body = document.querySelector('body');
+  var waitlist = document.querySelector('#waitlist');
+  var waitlistForm = document.querySelector('.waitlist-form'); // animation on window load
 
   window.addEventListener('load', function () {
     body.classList.remove('overflow-hidden');
@@ -5118,6 +5120,17 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
     if (window.scrollY < navbarHeight) {
       navbar.classList.remove('bg-white');
+    }
+  }); // waiting list form
+  // check if checkbox checked
+
+  waitlist.addEventListener('click', function () {
+    var checked = waitlist.checked;
+
+    if (checked) {
+      waitlistForm.classList.remove('hidden');
+    } else {
+      waitlistForm.classList.add('hidden');
     }
   });
 })();
