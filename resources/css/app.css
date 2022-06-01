@@ -70,6 +70,17 @@
   animation: fadeIn 2s ease-out;
 }
 
+#discord-id::-webkit-outer-spin-button,
+#discord-id::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#discord-id[type=number] {
+  -moz-appearance: textfield;
+}
+
 @keyframes fillIn {
   25% {
     right: 100%;
@@ -95,5 +106,27 @@
 
   80% {
     opacity: 1;
+  }
+}
+
+@keyframes modalBgIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
   }
 }
