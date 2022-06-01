@@ -1,7 +1,25 @@
 <x-app-layout>
   <div class="mt-18">
-    <form action="">
-
+    <form action="{{ route('interest-check.store') }}" method="POST">
+      @csrf
+      {{-- Communit Form --}}
+      <div>
+        <span>
+          <p>Community</p>
+        </span>
+        <div>
+          <input type="radio" name="community" id="community" value="discord">
+          <label for="discord">Discord</label>
+        </div>
+        <div>
+          <input type="radio" name="community" id="community" value="instagram">
+          <label for="instagram">Instagram</label>
+        </div>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" name="username">
+        </div>
+      </div>
       {{-- layout form --}}
       <div>
         <span>
@@ -9,29 +27,29 @@
         </span>
         <div>
           <input type="radio" name="layout" id="layout" value="wkl">
-          <label for="wkl">Wkl (Window key less)</label>
+          <label for="wkl">WKL (Winkeyless)</label>
         </div>
         <div>
           <input type="radio" name="layout" id="layout" value="wk">
-          <label for="wk">Wk (Window key)</label>
+          <label for="wk">WK (Winkey)</label>
         </div>
       </div>
 
       {{-- color form --}}
       <div>
         <span>
-          <p>Prefered color</p>
+          <p>Prefered colors</p>
         </span>
         <div>
-          <input type="checkbox" name="white" id="color" value="white">
+          <input type="checkbox" name="color[]" id="color" value="white">
           <label for="white">White</label>
         </div>
         <div>
-          <input type="checkbox" name="black" id="color" value="black">
+          <input type="checkbox" name="color[]" id="color" value="black">
           <label for="black">Black</label>
         </div>
         <div>
-          <input type="checkbox" name="red" id="color" value="red">
+          <input type="checkbox" name="color[]" id="color" value="red">
           <label for="red">Red</label>
         </div>
       </div>
@@ -39,15 +57,11 @@
       {{-- plate form --}}
       <div>
         <span>
-          <p>Prefered plate</p>
+          <p>Preferred plate</p>
         </span>
         <div>
           <input type="radio" name="plate" id="plate" value="polycarbonate">
           <label for="polycarbonate">Polycarbonate</label>
-        </div>
-        <div>
-          <input type="radio" name="plate" id="plate" value="aluminium">
-          <label for="aluminium">Aluminium</label>
         </div>
         <div>
           <input type="radio" name="plate" id="plate" value="fr4">
@@ -65,9 +79,12 @@
           <label for="7u">7u Spacebar</label>
         </div>
         <div>
-          <input type="radio" name="bottom-row" id="bottom-row" value="6-25u">
+          <input type="radio" name="bottom-row" id="bottom-row" value="6.25u">
           <label for="6-25u">6.25u Spacebar</label>
         </div>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
       </div>
     </form>
   </div>

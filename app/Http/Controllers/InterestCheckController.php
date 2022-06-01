@@ -31,7 +31,22 @@ class InterestCheckController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $colors = $request->input('color');
+
+        $responses = json_encode([
+            'layout' => $request->input('layout'),
+            'preferred_colors' => $colors,
+            'preferred_plate' => $request->input('plate'),
+            'bottom_row' => $request->input('bottom-row')
+        ]);
+
+        $interestCheck = [
+            'community' => $request->input('community'),
+            'username' => $request->input('username'),
+            'responses' => $responses
+        ];
+
+        InterestCheck::create($interestCheck);
     }
 
     /**
