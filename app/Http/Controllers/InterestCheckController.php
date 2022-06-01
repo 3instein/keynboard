@@ -39,6 +39,12 @@ class InterestCheckController extends Controller {
             'plate' => ['required'],
             'bottom-row' => ['required'],
         ]);
+
+        if($request->input('community') == 'discord'){
+            $username = $request->input('username').'#'.$request->input('id');
+        } else if($request->input('community') == 'instagram') {
+            $username = '@'.$request->input('username');
+        }
         
         $responses = json_encode([
             'layout' => $request->input('layout'),
@@ -49,7 +55,7 @@ class InterestCheckController extends Controller {
 
         $interestCheck = [
             'community' => $request->input('community'),
-            'username' => $request->input('username'),
+            'username' => $username,
             'responses' => $responses
         ];
 
