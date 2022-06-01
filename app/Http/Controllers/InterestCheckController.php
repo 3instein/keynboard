@@ -31,6 +31,15 @@ class InterestCheckController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
+        $validatedData = $request->validate([
+            'community' => ['required'],
+            'username' => ['required', 'max:255'],
+            'layout' => ['required'],
+            'color' => ['required'],
+            'plate' => ['required'],
+            'bottom-row' => ['required'],
+        ]);
+        
         $colors = $request->input('color');
 
         $responses = json_encode([
