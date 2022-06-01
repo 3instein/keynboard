@@ -5093,6 +5093,9 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var keebHero1 = document.querySelector('.keeb-hero-1');
   var keebHero2 = document.querySelector('.keeb-hero-2');
   var body = document.querySelector('body');
+  var community = document.querySelectorAll('#community');
+  var instagramInput = document.querySelector('.instagram-input');
+  var discordInput = document.querySelector('.discord-input');
   var waitlist = document.querySelector('#waitlist');
   var waitlistForm = document.querySelector('.waitlist-form'); // animation on window load
 
@@ -5121,8 +5124,26 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
     if (window.scrollY < navbarHeight) {
       navbar.classList.remove('bg-white');
     }
-  }); // waiting list form
-  // check if checkbox checked
+  }); // community section
+
+  var _loop = function _loop(i) {
+    community[i].addEventListener('click', function () {
+      var value = community[i].value;
+
+      if (value == 'instagram') {
+        instagramInput.classList.remove('hidden');
+        discordInput.classList.add('hidden');
+      } else if (value == 'discord') {
+        instagramInput.classList.add('hidden');
+        discordInput.classList.remove('hidden');
+      }
+    });
+  };
+
+  for (var i = 0; i < community.length; i++) {
+    _loop(i);
+  } // waiting list form
+
 
   waitlist.addEventListener('click', function () {
     var checked = waitlist.checked;

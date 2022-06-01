@@ -17,9 +17,29 @@
             <input type="radio" name="community" id="community" value="instagram">
             <label for="instagram">Instagram</label>
           </div>
-          <div class="mt-3">
+
+          {{-- instagram input --}}
+          <div class="mt-3 hidden instagram-input">
             <label class="font-semibold" for="username">Your username on that platform</label>
-            <input class="block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" type="text" name="username">
+            <div class="flex rounded-md shadow-sm">
+              <span
+                class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">@</span>
+              <input class="flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" type="text"
+                name="username">
+            </div>
+          </div>
+
+          {{-- discord input --}}
+          <div class="mt-3 hidden discord-input">
+            <label class="font-semibold" for="username">Your username on that platform</label>
+            <div class="flex rounded-md shadow-sm">
+              <input class="flex-1 block w-full rounded-none rounded-l-md sm:text-sm border-gray-300" type="text"
+                name="username">
+              <span
+                class="inline-flex items-center px-3 border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">#</span>
+              <input class="rounded-r-md sm:text-sm border-gray-300 w-20" type="number"
+                name="id" id="discord-id">
+            </div>
           </div>
         </div>
         {{-- layout form --}}
@@ -87,36 +107,39 @@
           </div>
         </div>
         <hr class="my-5" />
+
+        {{-- waitlist form --}}
+        <div class="mt-3">
+          <input type="checkbox" name="waitlist" id="waitlist">
+          <label for="waitlist">Would you like to be put in the waiting list?</label>
+        </div>
+        <div class="hidden waitlist-form mt-3">
+          <div>
+            <div>
+              <label class="font-semibold" for="name">Name</label>
+              <input class="block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" type="text" name="name">
+            </div>
+            <div class="mt-3">
+              <label class="font-semibold" for="email">Email</label>
+              <input class="block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" type="email" name="email">
+            </div>
+            <div class="mt-3">
+              <label class="font-semibold" for="password">Password</label>
+              <input class="block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" type="password"
+                name="password">
+            </div>
+          </div>
+          <div class="w-[356px] mt-3">
+            <span>
+              <p class="font-medium text-gray-500 text-sm">By joining the waiting list, you will receive an email
+                notification for confirming your response.</p>
+            </span>
+          </div>
+        </div>
+        <hr class="my-5" />
         <div class="mt-3 grid place-items-end">
           <button class="bg-base-gold font-bold text-white py-1 px-3 rounded tracking-tight"
             type="submit">Submit</button>
-        </div>
-      </div>
-
-      {{-- waitlist form --}}
-      <div class="mt-3">
-        <input type="checkbox" name="waitlist" id="waitlist">
-        <label for="waitlist">Would you like to be put in the waiting list?</label>
-      </div>
-      <div class="bg-white px-10 py-5 rounded-lg hidden waitlist-form mt-3">
-        <div>
-          <div>
-            <label class="font-semibold" for="name">Name</label>
-            <input class="block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" type="text" name="name">
-          </div>
-          <div class="mt-3">
-            <label class="font-semibold" for="email">Email</label>
-            <input class="block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" type="email" name="email">
-          </div>
-          <div class="mt-3">
-            <label class="font-semibold" for="password">Password</label>
-            <input class="block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" type="password" name="password">
-          </div>
-        </div>
-        <div class="w-[356px] mt-3">
-          <span>
-            <p class="font-medium text-gray-500 text-sm">By joining the waiting list, you will receive an email notification for confirming your response.</p>
-          </span>
         </div>
       </div>
     </form>

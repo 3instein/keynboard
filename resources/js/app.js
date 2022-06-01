@@ -16,6 +16,9 @@ Alpine.start();
   const keebHero1 = document.querySelector('.keeb-hero-1');
   const keebHero2 = document.querySelector('.keeb-hero-2');
   const body = document.querySelector('body');
+  const community = document.querySelectorAll('#community');
+  const instagramInput = document.querySelector('.instagram-input');
+  const discordInput = document.querySelector('.discord-input');
   const waitlist = document.querySelector('#waitlist');
   const waitlistForm = document.querySelector('.waitlist-form');
 
@@ -49,8 +52,21 @@ Alpine.start();
     }
   });
 
+  // community section
+  for (let i = 0; i < community.length; i++) {
+    community[i].addEventListener('click', function () {
+      let value = community[i].value;
+      if (value == 'instagram') {
+        instagramInput.classList.remove('hidden');
+        discordInput.classList.add('hidden');
+      } else if (value == 'discord') {
+        instagramInput.classList.add('hidden');
+        discordInput.classList.remove('hidden');
+      }
+    });
+  }
+
   // waiting list form
-  // check if checkbox checked
   waitlist.addEventListener('click', function () {
     const checked = waitlist.checked;
     if (checked) {
