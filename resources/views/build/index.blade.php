@@ -20,49 +20,80 @@
               <form action="{{ route('build.load') }}" method="POST">
                 @csrf
                 <input type="text" name="build-code">
-                <button type="submit">Submit</button>
+                <button class="border-[1.5px] border-base-gold py-2 px-3 text-base-gold font-bold"
+                  type="submit">Submit</button>
               </form>
             </div>
           </div>
+          <p class="text-3xl font-bold mt-8">$100.00</p>
+          <p class="font-semibold text-sm mt-1">Estimated delivery: December 2050</p>
         </div>
 
         {{-- build option --}}
-        <div class="mt-8">
+        <div class="mt-4">
           <form action="#" method="POST">
             @csrf
             <button class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold w-full text-white rounded"
               type="submit">Add to
-              cart</button>
+              bag</button>
+
+            {{-- top case --}}
             <div class="top mt-8">
-              <div class="w-full border-b-[1px] border-black">
+              <div class="w-full border-b-[1px] border-black mb-2 flex justify-between items-center">
                 <p class="font-semibold text-xl">Top Case</p>
+                <p>Black - $100</p>
               </div>
-              @foreach ($top_cases as $top_case)
-                @if (isset($build) && $build->top_case->id == $top_case->id)
-                  <input class="top-case" type="radio" name="top_case" value="{{ $top_case->id }}"
-                    id="{{ $top_case->name }}"> {{ $top_case->name }}
-                @else
-                  <input class="top-case" type="radio" name="top_case" value="{{ $top_case->id }}"
-                    id="{{ $top_case->name }}" @if ($top_case->name == 'Black') {{ 'checked' }} @endif>
-                  {{ $top_case->name }}
-                @endif
-              @endforeach
+              <div class="grid grid-cols-3 gap-x-12">
+                @foreach ($top_cases as $top_case)
+                  @if (isset($build) && $build->top_case->id == $top_case->id)
+                    <div class="mb-2">
+                      <input class="top-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                        type="radio" name="top_case" value="{{ $top_case->id }}" data-="{{ $top_case->name }}"
+                        id="top-case-{{ $top_case->name }}" />
+                      <label for="top-case-{{ $top_case->name }}">{{ $top_case->name }}</label>
+                    </div>
+                  @else
+                    <div class="mb-2">
+                      <input class="top-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                        type="radio" name="top_case" value="{{ $top_case->id }}" data-="{{ $top_case->name }}"
+                        id="top-case-{{ $top_case->name }}"
+                        @if ($top_case->name == 'Black') {{ 'checked' }} @endif />
+                      <label class="cursor-pointer hover:text-base-gold"
+                        for="top-case-{{ $top_case->name }}">{{ $top_case->name }}</label>
+                    </div>
+                  @endif
+                @endforeach
+              </div>
             </div>
 
+            {{-- bottom case --}}
             <div class="bottom mt-8">
-              <div class="w-full border-b-[1px] border-black">
+              <div class="w-full border-b-[1px] border-black mb-2 flex justify-between items-center">
                 <p class="font-semibold text-xl">Bottom Case</p>
+                <p>Black - $100</p>
               </div>
-              @foreach ($bottom_cases as $bottom_case)
-                @if (isset($build) && $build->bottom_case->id == $bottom_case->id)
-                  <input class="bottom-case" type="radio" name="bottom_case" value="{{ $bottom_case->id }}"
-                    id="{{ $bottom_case->name }}"> {{ $bottom_case->name }}
-                @else
-                  <input class="bottom-case" type="radio" name="bottom_case" value="{{ $bottom_case->id }}"
-                    id="{{ $bottom_case->name }}" @if ($bottom_case->name == 'Black') {{ 'checked' }} @endif>
-                  {{ $bottom_case->name }}
-                @endif
-              @endforeach
+              <div class="grid grid-cols-3 gap-x-12">
+                @foreach ($bottom_cases as $bottom_case)
+                  @if (isset($build) && $build->bottom_case->id == $bottom_case->id)
+                    <div class="mb-2">
+                      <input class="bottom-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                        type="radio" name="bottom_case" value="{{ $bottom_case->id }}"
+                        data-="{{ $bottom_case->name }}" id="bottom-case-{{ $bottom_case->name }}" />
+                      <label class="cursor-pointer hover:text-base-gold"
+                        for="bottom-case-{{ $bottom_case->name }}">{{ $bottom_case->name }}</label>
+                    </div>
+                  @else
+                    <div class="mb-2">
+                      <input class="bottom-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                        type="radio" name="bottom_case" value="{{ $bottom_case->id }}"
+                        data-="{{ $bottom_case->name }}" id="bottom-case-{{ $bottom_case->name }}"
+                        @if ($bottom_case->name == 'Black') {{ 'checked' }} @endif />
+                      <label class="cursor-pointer hover:text-base-gold"
+                        for="bottom-case-{{ $bottom_case->name }}">{{ $bottom_case->name }}</label>
+                    </div>
+                  @endif
+                @endforeach
+              </div>
             </div>
 
             {{-- <div class="layout mt-8">

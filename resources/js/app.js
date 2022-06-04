@@ -32,10 +32,10 @@ Alpine.start();
 
   // build page
   const keebEmbed = {
-    'black-black': 'https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1',
-    'black-white': 'https://sketchfab.com/models/208db99be9664cccaa80cba18b62a157/embed?autostart=1',
-    'white-black': 'https://sketchfab.com/models/036e8d22677f4b748ec47bdb384d2d72/embed?autostart=1',
-    'white-white': 'https://sketchfab.com/models/6cb9185a99fa463d8b9bc72acb7d2af7/embed?autostart=1',
+    'black-black': 'https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1&camera=0',
+    'black-white': 'https://sketchfab.com/models/208db99be9664cccaa80cba18b62a157/embed?autostart=1&camera=0',
+    'white-black': 'https://sketchfab.com/models/036e8d22677f4b748ec47bdb384d2d72/embed?autostart=1&camera=0',
+    'white-white': 'https://sketchfab.com/models/6cb9185a99fa463d8b9bc72acb7d2af7/embed?autostart=1&camera=0',
   }
 
   const buildCode = document.querySelector('.build-code');
@@ -131,7 +131,7 @@ Alpine.start();
     for (let i = 0; i < topCase.length; i++) {
       topCase[i].addEventListener('click', function () {
         if (topCase[i].checked) {
-          topCaseColor = topCase[i].id.split(' ')[0].toLowerCase();
+          topCaseColor = topCase[i].getAttribute('data-').split(' ')[0].toLowerCase();
           code = topCaseColor + '-' + bottomCaseColor;
           sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
         }
@@ -139,7 +139,7 @@ Alpine.start();
 
       bottomCase[i].addEventListener('click', function () {
         if (bottomCase[i].checked) {
-          bottomCaseColor = bottomCase[i].id.split(' ')[0].toLowerCase();
+          bottomCaseColor = bottomCase[i].getAttribute('data-').split(' ')[0].toLowerCase();
           code = topCaseColor + '-' + bottomCaseColor;
           sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
         }

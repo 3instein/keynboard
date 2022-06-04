@@ -595,39 +595,6 @@ select {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
-
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
-  }
-}
 .prose {
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -1021,17 +988,17 @@ select {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
-.my-40 {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
+.my-40 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1108,14 +1075,20 @@ select {
 .mt-16 {
   margin-top: 4rem;
 }
-.mt-20 {
-  margin-top: 5rem;
-}
 .mt-18 {
   margin-top: 4.5rem;
 }
 .mt-9 {
   margin-top: 2.25rem;
+}
+.mt-20 {
+  margin-top: 5rem;
+}
+.ml-8 {
+  margin-left: 2rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 .mr-48 {
   margin-right: 12rem;
@@ -1125,18 +1098,6 @@ select {
 }
 .ml-48 {
   margin-left: 12rem;
-}
-.mb-20 {
-  margin-bottom: 5rem;
-}
-.mt-\[72px\] {
-  margin-top: 72px;
-}
-.mt-\[144px\] {
-  margin-top: 144px;
-}
-.ml-8 {
-  margin-left: 2rem;
 }
 .block {
   display: block;
@@ -1194,24 +1155,6 @@ select {
 .h-full {
   height: 100%;
 }
-.h-96 {
-  height: 24rem;
-}
-.h-screen {
-  height: 100vh;
-}
-.h-4\/5 {
-  height: 80%;
-}
-.h-\[calc\(100vh-20\%\)\] {
-  height: calc(100vh - 20%);
-}
-.h-\[calc\(100vh-20vh\)\] {
-  height: calc(100vh - 20vh);
-}
-.h-\[calc\(100vh-30vh\)\] {
-  height: calc(100vh - 30vh);
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1268,6 +1211,9 @@ select {
   width: -moz-fit-content;
   width: fit-content;
 }
+.w-\[calc\(100vw-592px-8rem\)\] {
+  width: calc(100vw - 592px - 8rem);
+}
 .w-32 {
   width: 8rem;
 }
@@ -1294,9 +1240,6 @@ select {
 }
 .min-w-0 {
   min-width: 0px;
-}
-.min-w-full {
-  min-width: 100%;
 }
 .max-w-screen-xl {
   max-width: 1280px;
@@ -1364,6 +1307,9 @@ select {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .flex-row {
   flex-direction: row;
 }
@@ -1408,6 +1354,10 @@ select {
 }
 .gap-1 {
   gap: 0.25rem;
+}
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -1477,6 +1427,9 @@ select {
 }
 .border-2 {
   border-width: 2px;
+}
+.border-\[1\.5px\] {
+  border-width: 1.5px;
 }
 .border-b-2 {
   border-bottom-width: 2px;
@@ -1689,6 +1642,18 @@ select {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.py-\[10p9\] {
+  padding-top: 10p9;
+  padding-bottom: 10p9;
+}
+.py-\[9px\] {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1767,6 +1732,14 @@ select {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
@@ -1774,14 +1747,6 @@ select {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 .font-medium {
   font-weight: 500;
@@ -2166,9 +2131,20 @@ select {
     transform: translateY(0);
   }
 }
+.checked\:text-base-gold:checked {
+  --tw-text-opacity: 1;
+  color: rgb(245 191 138 / var(--tw-text-opacity));
+}
+.checked\:ring-transparent:checked {
+  --tw-ring-color: transparent;
+}
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+.hover\:border-base-gold:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(245 191 138 / var(--tw-border-opacity));
 }
 .hover\:bg-indigo-600:hover {
   --tw-bg-opacity: 1;
@@ -2213,6 +2189,10 @@ select {
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.hover\:text-base-gold:hover {
+  --tw-text-opacity: 1;
+  color: rgb(245 191 138 / var(--tw-text-opacity));
 }
 .focus\:z-10:focus {
   z-index: 10;

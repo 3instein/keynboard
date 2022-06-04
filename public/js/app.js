@@ -5106,10 +5106,10 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var waitlistForm = document.querySelector('.waitlist-form'); // build page
 
   var keebEmbed = {
-    'black-black': 'https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1',
-    'black-white': 'https://sketchfab.com/models/208db99be9664cccaa80cba18b62a157/embed?autostart=1',
-    'white-black': 'https://sketchfab.com/models/036e8d22677f4b748ec47bdb384d2d72/embed?autostart=1',
-    'white-white': 'https://sketchfab.com/models/6cb9185a99fa463d8b9bc72acb7d2af7/embed?autostart=1'
+    'black-black': 'https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1&camera=0',
+    'black-white': 'https://sketchfab.com/models/208db99be9664cccaa80cba18b62a157/embed?autostart=1&camera=0',
+    'white-black': 'https://sketchfab.com/models/036e8d22677f4b748ec47bdb384d2d72/embed?autostart=1&camera=0',
+    'white-white': 'https://sketchfab.com/models/6cb9185a99fa463d8b9bc72acb7d2af7/embed?autostart=1&camera=0'
   };
   var buildCode = document.querySelector('.build-code');
   var formBuildCode = document.querySelector('.form-build-code');
@@ -5202,7 +5202,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
     var _loop2 = function _loop2(_i) {
       topCase[_i].addEventListener('click', function () {
         if (topCase[_i].checked) {
-          topCaseColor = topCase[_i].id.split(' ')[0].toLowerCase();
+          topCaseColor = topCase[_i].getAttribute('data-').split(' ')[0].toLowerCase();
           code = topCaseColor + '-' + bottomCaseColor;
           sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
         }
@@ -5210,7 +5210,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
       bottomCase[_i].addEventListener('click', function () {
         if (bottomCase[_i].checked) {
-          bottomCaseColor = bottomCase[_i].id.split(' ')[0].toLowerCase();
+          bottomCaseColor = bottomCase[_i].getAttribute('data-').split(' ')[0].toLowerCase();
           code = topCaseColor + '-' + bottomCaseColor;
           sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
         }
