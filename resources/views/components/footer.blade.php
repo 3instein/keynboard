@@ -1,4 +1,4 @@
-<footer class="mt-20 bg-dark pt-20">
+<footer class="bg-dark pt-20">
   <div class="grid place-items-center">
     <div>
       <div>
