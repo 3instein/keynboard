@@ -5083,7 +5083,7 @@ window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 (function () {
-  'use strict';
+  'use strict'; // landing page
 
   var navbar = document.querySelector('.navbar');
   var navbarHeight = navbar.offsetHeight;
@@ -5092,7 +5092,8 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var ctas = document.querySelectorAll('.cta');
   var keebHero1 = document.querySelector('.keeb-hero-1');
   var keebHero2 = document.querySelector('.keeb-hero-2');
-  var body = document.querySelector('body');
+  var body = document.querySelector('body'); // ic page
+
   var community = document.querySelectorAll('#community');
   var instagramInput = document.querySelector('.instagram-input');
   var discordInput = document.querySelector('.discord-input');
@@ -5102,7 +5103,19 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
   var layoutInfo = document.querySelector('.layout-info');
   var cancelBtn = document.querySelector('.cancel-btn');
   var waitlist = document.querySelector('#waitlist');
-  var waitlistForm = document.querySelector('.waitlist-form'); // animation on window load
+  var waitlistForm = document.querySelector('.waitlist-form'); // build page
+
+  var keebEmbed = {
+    'black-black': 'https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1',
+    'black-white': 'https://sketchfab.com/models/208db99be9664cccaa80cba18b62a157/embed?autostart=1',
+    'white-black': 'https://sketchfab.com/models/036e8d22677f4b748ec47bdb384d2d72/embed?autostart=1',
+    'white-white': 'https://sketchfab.com/models/6cb9185a99fa463d8b9bc72acb7d2af7/embed?autostart=1'
+  };
+  var buildCode = document.querySelector('.build-code');
+  var formBuildCode = document.querySelector('.form-build-code');
+  var sketfabEmbedWrapper = document.querySelector('.sketchfab-embed-wrapper');
+  var topCase = document.querySelectorAll('.top-case');
+  var bottomCase = document.querySelectorAll('.bottom-case'); // animation on window load
 
   window.addEventListener('load', function () {
     body.classList.remove('overflow-hidden');
@@ -5149,30 +5162,65 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
   for (var i = 0; i < community.length; i++) {
     _loop(i);
-  } // layout info
+  } // // layout info
+  // layoutInfo.addEventListener('click', function () {
+  //   modal.classList.remove('hidden');
+  //   modalBg.style.transition = 'all .3s ease-out';
+  //   modalBg.style.animation = 'modalBgIn .3s ease-out';
+  //   modalPanel.style.transition = 'all .3s ease-out';
+  //   modalPanel.style.animation = 'modalBgIn .3s ease-out';
+  // });
+  // // cancel
+  // cancelBtn.addEventListener('click', function () {
+  //   modal.classList.add('hidden');
+  // });
+  // // waiting list form
+  // waitlist.addEventListener('click', function () {
+  //   const checked = waitlist.checked;
+  //   if (checked) {
+  //     waitlistForm.classList.remove('hidden');
+  //   } else {
+  //     waitlistForm.classList.add('hidden');
+  //   }
+  // });
+  // build configuration
 
 
-  layoutInfo.addEventListener('click', function () {
-    modal.classList.remove('hidden');
-    modalBg.style.transition = 'all .3s ease-out';
-    modalBg.style.animation = 'modalBgIn .3s ease-out';
-    modalPanel.style.transition = 'all .3s ease-out';
-    modalPanel.style.animation = 'modalBgIn .3s ease-out';
-  }); // cancel
+  if (buildCode) {
+    buildCode.addEventListener('click', function () {
+      formBuildCode.classList.remove('hidden');
+    });
+  } // keeb model
 
-  cancelBtn.addEventListener('click', function () {
-    modal.classList.add('hidden');
-  }); // waiting list form
 
-  waitlist.addEventListener('click', function () {
-    var checked = waitlist.checked;
+  if (sketfabEmbedWrapper) {
+    // top case bottom case
+    var topCaseColor = 'black';
+    var bottomCaseColor = 'black';
+    var code = topCaseColor + '-' + bottomCaseColor;
 
-    if (checked) {
-      waitlistForm.classList.remove('hidden');
-    } else {
-      waitlistForm.classList.add('hidden');
+    var _loop2 = function _loop2(_i) {
+      topCase[_i].addEventListener('click', function () {
+        if (topCase[_i].checked) {
+          topCaseColor = topCase[_i].id.split(' ')[0].toLowerCase();
+          code = topCaseColor + '-' + bottomCaseColor;
+          sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
+        }
+      });
+
+      bottomCase[_i].addEventListener('click', function () {
+        if (bottomCase[_i].checked) {
+          bottomCaseColor = bottomCase[_i].id.split(' ')[0].toLowerCase();
+          code = topCaseColor + '-' + bottomCaseColor;
+          sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
+        }
+      });
+    };
+
+    for (var _i = 0; _i < topCase.length; _i++) {
+      _loop2(_i);
     }
-  });
+  }
 })();
 
 /***/ }),

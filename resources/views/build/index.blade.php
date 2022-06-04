@@ -15,8 +15,8 @@
         <div>
           <p class="font-bold text-5xl">Key&Board Board65</p>
           <div class="mt-2 w-fit">
-            <p class="underline cursor-pointer">Enter build code</p>
-            <div class="mt-2">
+            <p class="underline cursor-pointer build-code">Enter build code</p>
+            <div class="mt-2 form-build-code hidden">
               <form action="{{ route('build.load') }}" method="POST">
                 @csrf
                 <input type="text" name="build-code">
@@ -39,9 +39,12 @@
               </div>
               @foreach ($top_cases as $top_case)
                 @if (isset($build) && $build->top_case->id == $top_case->id)
-                  <input type="radio" name="top_case" value="{{ $top_case->id }}"> {{ $top_case->name }}
+                  <input class="top-case" type="radio" name="top_case" value="{{ $top_case->id }}"
+                    id="{{ $top_case->name }}"> {{ $top_case->name }}
                 @else
-                  <input type="radio" name="top_case" value="{{ $top_case->id }}"> {{ $top_case->name }}
+                  <input class="top-case" type="radio" name="top_case" value="{{ $top_case->id }}"
+                    id="{{ $top_case->name }}" @if ($top_case->name == 'Black') {{ 'checked' }} @endif>
+                  {{ $top_case->name }}
                 @endif
               @endforeach
             </div>
@@ -52,10 +55,12 @@
               </div>
               @foreach ($bottom_cases as $bottom_case)
                 @if (isset($build) && $build->bottom_case->id == $bottom_case->id)
-                  <input type="radio" name="bottom_case" value="{{ $bottom_case->id }}" checked>
-                  {{ $bottom_case->name }}
+                  <input class="bottom-case" type="radio" name="bottom_case" value="{{ $bottom_case->id }}"
+                    id="{{ $bottom_case->name }}"> {{ $bottom_case->name }}
                 @else
-                  <input type="radio" name="bottom_case" value="{{ $bottom_case->id }}"> {{ $bottom_case->name }}
+                  <input class="bottom-case" type="radio" name="bottom_case" value="{{ $bottom_case->id }}"
+                    id="{{ $bottom_case->name }}" @if ($bottom_case->name == 'Black') {{ 'checked' }} @endif>
+                  {{ $bottom_case->name }}
                 @endif
               @endforeach
             </div>
