@@ -595,6 +595,39 @@ select {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+}
 .prose {
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -992,6 +1025,14 @@ select {
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1085,6 +1126,18 @@ select {
 .ml-48 {
   margin-left: 12rem;
 }
+.mb-20 {
+  margin-bottom: 5rem;
+}
+.mt-\[72px\] {
+  margin-top: 72px;
+}
+.mt-\[144px\] {
+  margin-top: 144px;
+}
+.ml-8 {
+  margin-left: 2rem;
+}
 .block {
   display: block;
 }
@@ -1137,6 +1190,27 @@ select {
 }
 .h-auto {
   height: auto;
+}
+.h-full {
+  height: 100%;
+}
+.h-96 {
+  height: 24rem;
+}
+.h-screen {
+  height: 100vh;
+}
+.h-4\/5 {
+  height: 80%;
+}
+.h-\[calc\(100vh-20\%\)\] {
+  height: calc(100vh - 20%);
+}
+.h-\[calc\(100vh-20vh\)\] {
+  height: calc(100vh - 20vh);
+}
+.h-\[calc\(100vh-30vh\)\] {
+  height: calc(100vh - 30vh);
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1220,6 +1294,9 @@ select {
 }
 .min-w-0 {
   min-width: 0px;
+}
+.min-w-full {
+  min-width: 100%;
 }
 .max-w-screen-xl {
   max-width: 1280px;
@@ -1419,6 +1496,9 @@ select {
 .border-r-0 {
   border-right-width: 0px;
 }
+.border-b-\[1px\] {
+  border-bottom-width: 1px;
+}
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1445,6 +1525,10 @@ select {
 .border-base-gold {
   --tw-border-opacity: 1;
   border-color: rgb(245 191 138 / var(--tw-border-opacity));
+}
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .border-b-base {
   --tw-border-opacity: 1;
@@ -1694,6 +1778,10 @@ select {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 .font-medium {
   font-weight: 500;
