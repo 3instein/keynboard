@@ -81,6 +81,17 @@
   -moz-appearance: textfield;
 }
 
+#phone::-webkit-outer-spin-button,
+#phone::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#phone[type=number] {
+  -moz-appearance: textfield;
+}
+
 @keyframes fillIn {
   25% {
     right: 100%;
