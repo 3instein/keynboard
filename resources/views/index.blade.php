@@ -34,7 +34,7 @@
         <div class="w-5/12 mt-8">
           <p class="text-base">
             We are a custom keyboard designer based in Indonesia that strives to provide accessible and customized
-            keyboard that suits you like a glove. Furthermore, in each of our design we want to declare our design
+            keyboard that suits you like a glove. Furthermore, in each of our design we want to define our design
             language and character.
           </p>
         </div>
@@ -56,13 +56,12 @@
           <div class="mt-8">
             <div class="text-base">
               <ul>
-                <li>Aluminium top & bottom case</li>
-                <li>Aluminium or SS external weight</li>
-                <li>Aliminium or brass rotary knob matching the external weight</li>
-                <li>Hot-swap PCB with USB-C daughterboard</li>
-                <li>Polycarbonate plate</li>
-                <li>Gaskets</li>
-                <li>Screws and accessories</li>
+                <li>* Aluminium top & bottom case</li>
+                <li>* Hot-swap PCB or Soldered PCB with USB-C daughterboard</li>
+                <li>* Aluminium or FR4 or polycarbonate plate</li>
+                <li>* 50a rubber O-ring</li>
+                <li>* Rubber feets</li>
+                <li>* Screws and accessories</li>
               </ul>
             </div>
           </div>
@@ -77,11 +76,10 @@
           <div class="mt-8">
             <div class="text-base">
               <ul>
-                <li>65% with rotary knob layout</li>
-                <li>Full isolation gasket mount system</li>
-                <li>7.0° typing angle</li>
-                <li>18mm front height</li>
-                <li>PCB QMK/VIA compatible</li>
+                <li>* 65% layout</li>
+                <li>* O-ring gasket mount</li>
+                <li>* 6.0° typing angle</li>
+                <li>* PCB QMK/VIA compatible</li>
               </ul>
             </div>
           </div>
@@ -116,7 +114,7 @@
           </div>
           <div class="w-3/4">
             <p class="text-base">
-              Add your configured build to the cart and order it.
+              Order and finish the order process of your build.
             </p>
           </div>
         </div>
