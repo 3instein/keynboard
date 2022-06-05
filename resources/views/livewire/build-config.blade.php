@@ -141,8 +141,20 @@
       const keebEmbed = {
         'black-black': 'https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1&camera=0',
         'black-white': 'https://sketchfab.com/models/208db99be9664cccaa80cba18b62a157/embed?autostart=1&camera=0',
+        'black-navy': 'https://sketchfab.com/models/96d7a97a4c7749c9867b0416a65ca041/embed?autostart=1&camera=0',
+        'black-silver': 'https://sketchfab.com/models/a8609e88b6654c48a56769cce7a8254d/embed?autostart=1&camera=0',
         'white-black': 'https://sketchfab.com/models/036e8d22677f4b748ec47bdb384d2d72/embed?autostart=1&camera=0',
         'white-white': 'https://sketchfab.com/models/6cb9185a99fa463d8b9bc72acb7d2af7/embed?autostart=1&camera=0',
+        'white-navy': 'https://sketchfab.com/models/29731036ced5484d8c7e5975d9fe1cc6/embed?autostart=1&camera=0',
+        'white-silver': 'https://sketchfab.com/models/c7ced9db65a8413c98f8f83452b45b52/embed?autostart=1&camera=0',
+        'navy-black': 'https://sketchfab.com/models/e1a4e54fb3144f1dbb30d7ab7e240bfe/embed?autostart=1&camera=0',
+        'navy-white': 'https://sketchfab.com/models/dbe64bbd92514c0f872be3234a9aedf8/embed?autostart=1&camera=0',
+        'navy-navy': 'https://sketchfab.com/models/d6eb1ad4570a4750b94bdfc244db18b7/embed?autostart=1&camera=0',
+        'navy-silver': 'https://sketchfab.com/models/2cecbfa3c7f74c16ba7b0dff4da0f1f6/embed?autostart=1&camera=0',
+        'silver-black': 'https://sketchfab.com/models/7478ceec4c0047cbada886477c73e3ea/embed?autostart=1&camera=0',
+        'silver-white': 'https://sketchfab.com/models/f50f43fbcc9241ab8c13f29c5ee3aee4/embed?autostart=1&camera=0',
+        'silver-navy': 'https://sketchfab.com/models/700bc870c07a49ea82464f667eb50f16/embed?autostart=1&camera=0',
+        'silver-silver': 'https://sketchfab.com/models/5b940af8149945548076dbe37b493cdd/embed?autostart=1&camera=0',
       }
 
       const buildCode = document.querySelector('.build-code');
