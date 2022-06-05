@@ -87,13 +87,13 @@
         <div class="top mt-8">
           <div class="w-full border-b-[1px] border-black mb-2 flex justify-between items-center">
             <p class="font-semibold text-xl">Plate</p>
-            <p>No cost</p>
+            <p>{{ $plate_ }}</p>
           </div>
           <div class="grid grid-cols-3 gap-x-12">
             @foreach ($this->plates as $plate)
               <div class="mb-2">
-                <input class="plate checked:text-base-gold hover:border-base-gold checked:ring-transparent"
-                  type="radio" name="plate" value="{{ $plate->id }}" data-="{{ $plate->name }}"
+                <input class="plate checked:text-base-gold hover:border-base-gold checked:ring-transparent" type="radio"
+                  name="plate" value="{{ $plate->id }}" data-="{{ $plate->name }}"
                   id="plate-{{ $plate->id }}" wire:model="plate" />
                 <label class="cursor-pointer hover:text-base-gold"
                   for="plate-{{ $plate->id }}">{{ $plate->name }}</label>
@@ -106,33 +106,20 @@
         <div class="top mt-8">
           <div class="w-full border-b-[1px] border-black mb-2 flex justify-between items-center">
             <p class="font-semibold text-xl">PCB</p>
-            <p>No cost</p>
+            <p>{{ $pcb_ }}</p>
           </div>
           <div class="grid grid-cols-3 gap-x-12">
             @foreach ($this->pcbs as $pcb)
               <div class="mb-2">
-                <input class="pcb checked:text-base-gold hover:border-base-gold checked:ring-transparent"
-                  type="radio" name="pcb" value="{{ $pcb->id }}" data-="{{ $pcb->name }}"
-                  id="pcb-{{ $pcb->id }}" wire:model="pcb" />
+                <input class="pcb checked:text-base-gold hover:border-base-gold checked:ring-transparent" type="radio"
+                  name="pcb" value="{{ $pcb->id }}" data-="{{ $pcb->name }}" id="pcb-{{ $pcb->id }}"
+                  wire:model="pcb" />
                 <label class="cursor-pointer hover:text-base-gold"
                   for="pcb-{{ $pcb->id }}">{{ $pcb->name }}</label>
               </div>
             @endforeach
           </div>
         </div>
-
-        {{-- <div class="layout mt-8">
-                  <div class="w-full border-b-[1px] border-black">
-                    <p class="font-semibold text-xl">Keyboard Layout</p>
-                  </div>
-                  @foreach ($layouts as $layout)
-                    @if (isset($build) && $build->layout->id == $layout->id)
-                      <input type="radio" name="layout" value="{{ $layout->id }}" checked> {{ $layout->name }}
-                    @else
-                      <input type="radio" name="layout" value="{{ $layout->id }}"> {{ $layout->name }}
-                    @endif
-                  @endforeach
-                </div> --}}
       </form>
     </div>
   </div>
