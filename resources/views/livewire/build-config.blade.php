@@ -24,6 +24,25 @@
         <button class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold w-full text-white rounded"
           type="submit">Order now</button>
 
+        {{-- layout --}}
+        <div class="top mt-8">
+          <div class="w-full border-b-[1px] border-black mb-2 flex justify-between items-center">
+            <p class="font-semibold text-xl">Layout</p>
+            <p>No cost</p>
+          </div>
+          <div class="grid grid-cols-3 gap-x-12">
+            @foreach ($this->layouts as $layout)
+              <div class="mb-2">
+                <input class="top-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                  type="radio" name="layout" value="{{ $layout->id }}" data-="{{ $layout->name }}"
+                  id="top-case-{{ $layout->id }}" wire:model="layout" />
+                <label class="cursor-pointer hover:text-base-gold"
+                  for="top-case-{{ $layout->id }}">{{ $layout->name }}</label>
+              </div>
+            @endforeach
+          </div>
+        </div>
+
         {{-- top case --}}
         <div class="top mt-8">
           <div class="w-full border-b-[1px] border-black mb-2 flex justify-between items-center">

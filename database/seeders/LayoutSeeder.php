@@ -15,19 +15,16 @@ class LayoutSeeder extends Seeder
      */
     public function run()
     {
-        $layouts = [
-            [
-                'code' => 'V0',
-                'name' => 'WKL',
-                'price' => 20  
-            ],
-            [
-                'code' => 'V1',
-                'name' => 'WK',
-                'price' => 20
-            ]
-        ];
+        Layout::create([
+            'code' => 'V0',
+            'name' => 'WKL',
+            'price' => 0  
+        ]);
 
-        Layout::insert($layouts);
+        Layout::create([
+            'code' => 'V1',
+            'name' => 'WK',
+            'price' => 0  
+        ]);
     }
 }

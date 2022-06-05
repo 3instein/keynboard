@@ -16,6 +16,7 @@ class BuildConfig extends Component {
     public $total = 200;
     public $code = '';
     public $build;
+    public $layout = 1;
     public $topCase = 1;
     public $bottomCase = 1;
 
@@ -45,6 +46,10 @@ class BuildConfig extends Component {
         return BottomCase::all();
     }
 
+    public function getLayoutsProperty(){
+        return Layout::all();
+    }
+
     public function getTotalProperty() {
         return $this->total;
     }
@@ -67,7 +72,6 @@ class BuildConfig extends Component {
     }
 
     public function render() {
-        $this->layouts = Layout::all();
 
         return view('livewire.build-config');
     }
