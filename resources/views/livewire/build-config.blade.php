@@ -22,8 +22,7 @@
       <form action="#" method="POST">
         @csrf
         <button class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold w-full text-white rounded"
-          type="submit">Add to
-          bag</button>
+          type="submit">Order now</button>
 
         {{-- top case --}}
         <div class="top mt-8">
@@ -56,7 +55,8 @@
                 <input class="bottom-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
                   type="radio" name="bottom_case" value="{{ $bottom_case->id }}" data-="{{ $bottom_case->name }}"
                   id="bottom-case-{{ $bottom_case->id }}" wire:model="bottomCase" />
-                <label class="cursor-pointer hover:text-base-gold" for="bottom-case-{{ $bottom_case->name }}">
+                <label class="cursor-pointer hover:text-base-gold" for="bottom-case-{{ $bottom_case->id }}"
+                  wire:model="bottomCase">
                   {{ $bottom_case->name }}
                 </label>
               </div>
