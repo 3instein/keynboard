@@ -15,12 +15,18 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('build_id')
-            //     ->references('id')
-            //     ->on('builds')
-            //     ->constrained()
-            //     ->cascadeOnUpdate()
-            //     ->cascadeOnDelete();
+            $table->foreignId('user_id')
+                ->references('id')
+                ->on('users')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+            $table->foreignId('build_id')
+                ->references('id')
+                ->on('builds')
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->timestamps();
         });
     }

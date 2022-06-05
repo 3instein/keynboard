@@ -18,7 +18,7 @@
 
     {{-- build option --}}
     <div>
-      <form action="#" method="POST">
+      <form action="{{ route('order.create') }}" method="POST">
         @csrf
 
         {{-- layout --}}

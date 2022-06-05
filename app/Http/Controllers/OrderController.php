@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pcb;
 use App\Models\Order;
+use App\Models\Plate;
+use App\Models\Layout;
+use App\Models\TopCase;
+use App\Models\BottomCase;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -22,9 +27,23 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $layout = Layout::find($request->input('layout'));
+        $top_case = TopCase::find($request->input('top_case'));
+        $bottom_case = BottomCase::find($request->input('bottom_case'));
+        $plate = Plate::find($request->input('plate'));
+        $pcb = Pcb::find($request->input('pcb'));
+
+        $build_code = $layout->code . 
+                    $top_case->code . 
+                    $bottom_case->code . 
+                    $plate->code . 
+                    $pcb->code;
+
+        return view('order.create',[
+            'build_code' => $build_code,
+        ]);
     }
 
     /**
