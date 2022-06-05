@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('pcbs', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('build_id')
-            //     ->references('id')
-            //     ->on('builds')
-            //     ->constrained()
-            //     ->cascadeOnUpdate()
-            //     ->cascadeOnDelete();
+            $table->string('code');
+            $table->string('name');
+            $table->integer('price');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('pcbs');
     }
 };

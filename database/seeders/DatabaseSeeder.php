@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\PcbSeeder;
 use Illuminate\Database\Seeder;
 use Database\Seeders\LayoutSeeder;
 use Database\Seeders\TopCaseSeeder;
@@ -28,7 +29,9 @@ class DatabaseSeeder extends Seeder
             TopCaseSeeder::class,
             BottomCaseSeeder::class,
             LayoutSeeder::class,
-            BuildSeeder::class
+            PlateSeeder::class,
+            PcbSeeder::class,
+            BuildSeeder::class,
         ]);
     }
 }
