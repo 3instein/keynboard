@@ -83,6 +83,44 @@
           </div>
         </div>
 
+        {{-- plate --}}
+        <div class="top mt-8">
+          <div class="w-full border-b-[1px] border-black mb-2 flex justify-between items-center">
+            <p class="font-semibold text-xl">Plate</p>
+            <p>No cost</p>
+          </div>
+          <div class="grid grid-cols-3 gap-x-12">
+            @foreach ($this->plates as $plate)
+              <div class="mb-2">
+                <input class="top-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                  type="radio" name="plate" value="{{ $plate->id }}" data-="{{ $plate->name }}"
+                  id="top-case-{{ $plate->id }}" wire:model="plate" />
+                <label class="cursor-pointer hover:text-base-gold"
+                  for="top-case-{{ $plate->id }}">{{ $plate->name }}</label>
+              </div>
+            @endforeach
+          </div>
+        </div>
+
+        {{-- pcb --}}
+        <div class="top mt-8">
+          <div class="w-full border-b-[1px] border-black mb-2 flex justify-between items-center">
+            <p class="font-semibold text-xl">PCB</p>
+            <p>No cost</p>
+          </div>
+          <div class="grid grid-cols-3 gap-x-12">
+            @foreach ($this->pcbs as $pcb)
+              <div class="mb-2">
+                <input class="top-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                  type="radio" name="pcb" value="{{ $pcb->id }}" data-="{{ $pcb->name }}"
+                  id="top-case-{{ $pcb->id }}" wire:model="pcb" />
+                <label class="cursor-pointer hover:text-base-gold"
+                  for="top-case-{{ $pcb->id }}">{{ $pcb->name }}</label>
+              </div>
+            @endforeach
+          </div>
+        </div>
+
         {{-- <div class="layout mt-8">
                   <div class="w-full border-b-[1px] border-black">
                     <p class="font-semibold text-xl">Keyboard Layout</p>

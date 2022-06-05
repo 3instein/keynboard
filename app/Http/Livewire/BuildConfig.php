@@ -2,11 +2,13 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Pcb;
+use App\Models\Build;
+use App\Models\Plate;
 use App\Models\Layout;
 use App\Models\TopCase;
 use Livewire\Component;
 use App\Models\BottomCase;
-use App\Models\Build;
 
 class BuildConfig extends Component {
     public $top_case = 'Black - $100';
@@ -19,6 +21,8 @@ class BuildConfig extends Component {
     public $layout = 1;
     public $topCase = 1;
     public $bottomCase = 1;
+    public $plate = 1;
+    public $pcb = 1;
 
     public function updatedTopCase() {
         $this->emit('topCaseChanged', $this->topCase);
@@ -48,6 +52,14 @@ class BuildConfig extends Component {
 
     public function getLayoutsProperty(){
         return Layout::all();
+    }
+
+    public function getPlatesProperty(){
+        return Plate::all();
+    }
+
+    public function getPcbsProperty(){
+        return Pcb::all();
     }
 
     public function getTotalProperty() {
