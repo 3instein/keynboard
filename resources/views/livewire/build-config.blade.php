@@ -1,7 +1,7 @@
 <div>
   <div class="ml-8 w-full">
     <div x-data="{ open: false }">
-      <p class="font-bold text-5xl">Key&Board Board65</p>
+      <p class="font-bold text-5xl">Board65</p>
       <div class="mt-2 w-fit">
         <p class="underline cursor-pointer build-code" @click="open = !open">Enter build code</p>
         <div class="mt-2 form-build-code" x-show="open">
