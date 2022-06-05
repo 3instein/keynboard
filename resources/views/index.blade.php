@@ -1,7 +1,7 @@
 <x-app-layout>
   {{-- hero section --}}
   <section name="hero">
-    <div class="pl-20">
+    <div class="pl-20 relative overflow-hidden">
       <div class="flex items-center justify-between min-h-screen">
         <div>
           <div class="caption">
@@ -14,11 +14,11 @@
           </div>
           @include('components.cta-btn')
         </div>
-        <div class="absolute -top-48 right-24 keeb-hero-2">
-          <img class="h-auto w-[1024px]" src="/images/keeb-hero2.png" alt="keeb2">
+        <div class="absolute -top-48 right-24 keeb-hero-2 rotate-45">
+          <img class="h-auto w-[1280px]" src="/images/keeb-hero2.png" alt="keeb2">
         </div>
-        <div class="absolute bottom-0 -right-72 keeb-hero-1">
-          <img class="h-auto w-[896px]" src="/images/keeb-hero1.png" alt="keeb1">
+        <div class="absolute top-3/4 -right-72 keeb-hero-1 rotate-45">
+          <img class="h-auto w-[1408px]" src="/images/keeb-hero1.png" alt="keeb1">
         </div>
       </div>
     </div>
@@ -87,19 +87,19 @@
           </div>
         </div>
         <div class="ml-48">
-          <img class="h-auto w-96" src="/images/keeb1.png" alt="keeb1">
+          <img class="h-auto w-[512px]" src="/images/keeb2.png" alt="keeb1">
         </div>
       </div>
     </div>
   </section>
 
   {{-- how to section --}}
-  <section name="how-to">
+  <section class="mb-20" name="how-to">
     <div class="grid place-items-center">
       <div class="border-b-2 border-b-base w-fit">
         <p class="text-3xl uppercase text-base tracking-widest font-extrabold mb-4">Build your own: How to</p>
       </div>
-      <div class="mt-8 flex items-center justify-evenly w-4/5">
+      <div class="mt-12 grid grid-cols-3">
         <div class="text-center grid place-items-center">
           <div>
             <p class="text-base font-extrabold">Step 1</p>

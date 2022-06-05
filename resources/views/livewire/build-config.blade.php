@@ -13,16 +13,13 @@
           </form>
         </div>
       </div>
-      <p class="text-3xl font-bold mt-8">${{ $total }}.00</p>
-      <p class="font-semibold text-sm mt-1">Estimated delivery: December 2050</p>
+
     </div>
 
     {{-- build option --}}
-    <div class="mt-4">
+    <div>
       <form action="#" method="POST">
         @csrf
-        <button class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold w-full text-white rounded"
-          type="submit">Order now</button>
 
         {{-- layout --}}
         <div class="top mt-8">
@@ -120,6 +117,10 @@
             @endforeach
           </div>
         </div>
+        <p class="text-3xl font-bold mt-6">${{ $total }}.00</p>
+        <p class="font-semibold text-sm mt-1 mb-4">Estimated delivery: December 2050</p>
+        <button class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold w-full text-white rounded"
+          type="submit">Order now</button>
       </form>
     </div>
   </div>
