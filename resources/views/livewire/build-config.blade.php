@@ -33,11 +33,11 @@
           <div class="grid grid-cols-3 gap-x-12">
             @foreach ($this->layouts as $layout)
               <div class="mb-2">
-                <input class="top-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                <input class="layout checked:text-base-gold hover:border-base-gold checked:ring-transparent"
                   type="radio" name="layout" value="{{ $layout->id }}" data-="{{ $layout->name }}"
-                  id="top-case-{{ $layout->id }}" wire:model="layout" />
+                  id="layout-{{ $layout->id }}" wire:model="layout" />
                 <label class="cursor-pointer hover:text-base-gold"
-                  for="top-case-{{ $layout->id }}">{{ $layout->name }}</label>
+                  for="layout-{{ $layout->id }}">{{ $layout->name }}</label>
               </div>
             @endforeach
           </div>
@@ -92,11 +92,11 @@
           <div class="grid grid-cols-3 gap-x-12">
             @foreach ($this->plates as $plate)
               <div class="mb-2">
-                <input class="top-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                <input class="plate checked:text-base-gold hover:border-base-gold checked:ring-transparent"
                   type="radio" name="plate" value="{{ $plate->id }}" data-="{{ $plate->name }}"
-                  id="top-case-{{ $plate->id }}" wire:model="plate" />
+                  id="plate-{{ $plate->id }}" wire:model="plate" />
                 <label class="cursor-pointer hover:text-base-gold"
-                  for="top-case-{{ $plate->id }}">{{ $plate->name }}</label>
+                  for="plate-{{ $plate->id }}">{{ $plate->name }}</label>
               </div>
             @endforeach
           </div>
@@ -111,11 +111,11 @@
           <div class="grid grid-cols-3 gap-x-12">
             @foreach ($this->pcbs as $pcb)
               <div class="mb-2">
-                <input class="top-case checked:text-base-gold hover:border-base-gold checked:ring-transparent"
+                <input class="pcb checked:text-base-gold hover:border-base-gold checked:ring-transparent"
                   type="radio" name="pcb" value="{{ $pcb->id }}" data-="{{ $pcb->name }}"
-                  id="top-case-{{ $pcb->id }}" wire:model="pcb" />
+                  id="pcb-{{ $pcb->id }}" wire:model="pcb" />
                 <label class="cursor-pointer hover:text-base-gold"
-                  for="top-case-{{ $pcb->id }}">{{ $pcb->name }}</label>
+                  for="pcb-{{ $pcb->id }}">{{ $pcb->name }}</label>
               </div>
             @endforeach
           </div>
