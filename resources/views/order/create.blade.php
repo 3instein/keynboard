@@ -17,6 +17,10 @@
             <input class="rounded" type="email" id="email" name="email">
           </div>
           <div class="flex flex-col mb-6">
+            <label class="font-semibold mb-1" for="password">Password</label>
+            <input class="rounded" type="password" id="password" name="password">
+          </div>
+          <div class="flex flex-col mb-6">
             <label class="font-semibold mb-1" for="phone">Phone</label>
             <input class="rounded" type="number" id="phone" name="phone">
           </div>
@@ -32,8 +36,7 @@
           </div>
           <div class="flex flex-col mb-6">
             <label class="font-semibold mb-1" for="build-code">Build Code</label>
-            <input class="rounded" type="text" id="build-code" name="build-code" value="{{ $build_code }}"
-              disabled>
+            <input class="rounded" type="text" id="build-code" name="build-code" value="{{ $build_code }}">
           </div>
           <div class="sketchfab-embed-wrapper mb-6">
             <div class="sketchfab-embed-wrapper">
@@ -44,11 +47,11 @@
               </iframe>
             </div>
           </div>
+          <div class="text-right">
+            <button class="bg-base-gold px-10 py-3 uppercase tracking-widest font-bold text-white rounded"
+              type="submit">Finish order</button>
+          </div>
         </div>
-      </div>
-      <div class="text-right">
-        <button class="bg-base-gold px-10 py-3 uppercase tracking-widest font-bold text-white rounded"
-          type="submit">Finish order</button>
       </div>
     </form>
   </div>

@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pcb;
+use App\Models\User;
+use App\Models\Build;
 use App\Models\Order;
 use App\Models\Plate;
 use App\Models\Layout;
 use App\Models\TopCase;
 use App\Models\BottomCase;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class OrderController extends Controller
 {
@@ -54,7 +57,21 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $user = User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+            'phone' => $request->input('phone'),
+            'address' => $request->input('address'),
+        ]);
+
+        $build = Build::where('code' , $request->input('build-code'))->first();
+
+        Order::create([
+            'user_id' => $user->id,
+            'build_id' => $build->id
+        ]);
     }
 
     /**
