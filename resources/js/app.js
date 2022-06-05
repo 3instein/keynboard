@@ -33,7 +33,7 @@ Alpine.start();
   // animation on window load
   window.addEventListener('load', () => {
     body.classList.remove('overflow-hidden');
-    keebHero1.style.right = '-3rem';
+    keebHero1.style.right = '-25rem';
     keebHero2.style.right = '-8rem';
 
     setTimeout(function () {

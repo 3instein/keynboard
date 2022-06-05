@@ -19,7 +19,7 @@ class BuildConfig extends Component {
     public $prev_bot = 1;
     public $prev_plate = 1;
     public $prev_pcb = 1;
-    public $total = 200;
+    public $total = 280;
     public $code = '';
     public $build;
     public $layout = 1;

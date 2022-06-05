@@ -968,6 +968,27 @@ select {
 .-right-72 {
   right: -18rem;
 }
+.top-full {
+  top: 100%;
+}
+.top-3\/4 {
+  top: 75%;
+}
+.-right-96 {
+  right: -24rem;
+}
+.right-96 {
+  right: 24rem;
+}
+.left-full {
+  left: 100%;
+}
+.-right-0 {
+  right: -0px;
+}
+.-right-\[50rem\] {
+  right: -50rem;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1098,6 +1119,54 @@ select {
 }
 .ml-48 {
   margin-left: 12rem;
+}
+.mb-20 {
+  margin-bottom: 5rem;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
+.-mr-96 {
+  margin-right: -24rem;
+}
+.ml-96 {
+  margin-left: 24rem;
+}
+.mb-96 {
+  margin-bottom: 24rem;
+}
+.mr-80 {
+  margin-right: 20rem;
+}
+.mt-96 {
+  margin-top: 24rem;
+}
+.mb-\[512px\] {
+  margin-bottom: 512px;
+}
+.mb-\[50rem\] {
+  margin-bottom: 50rem;
+}
+.mb-\[500rem\] {
+  margin-bottom: 500rem;
+}
+.mb-\[100rem\] {
+  margin-bottom: 100rem;
+}
+.mb-\[1rem\] {
+  margin-bottom: 1rem;
+}
+.-mr-\[50rem\] {
+  margin-right: -50rem;
+}
+.ml-\[50rem\] {
+  margin-left: 50rem;
+}
+.ml-\[60rem\] {
+  margin-left: 60rem;
+}
+.ml-\[80rem\] {
+  margin-left: 80rem;
 }
 .block {
   display: block;
@@ -1235,6 +1304,18 @@ select {
 .w-4\/5 {
   width: 80%;
 }
+.w-\[512px\] {
+  width: 512px;
+}
+.w-\[1408px\] {
+  width: 1408px;
+}
+.w-\[1152px\] {
+  width: 1152px;
+}
+.w-\[1280px\] {
+  width: 1280px;
+}
 .min-w-0 {
   min-width: 0px;
 }
@@ -1271,6 +1352,14 @@ select {
 }
 .translate-y-0 {
   --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-8 {
+  --tw-translate-x: 2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-45 {
+  --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .scale-95 {

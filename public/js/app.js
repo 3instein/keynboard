@@ -5107,7 +5107,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
   window.addEventListener('load', function () {
     body.classList.remove('overflow-hidden');
-    keebHero1.style.right = '-3rem';
+    keebHero1.style.right = '-25rem';
     keebHero2.style.right = '-8rem';
     setTimeout(function () {
       caption.style.right = '0';
