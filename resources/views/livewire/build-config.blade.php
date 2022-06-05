@@ -119,6 +119,8 @@
         </div>
         <p class="text-3xl font-bold mt-6">${{ $total }}.00</p>
         <p class="font-semibold text-sm mt-1 mb-4">Estimated delivery: December 2050</p>
+        <input type="hidden" name="build-combination" id="build-combination"
+          value="https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1&camera=0" />
         <button class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold w-full text-white rounded"
           type="submit">Order now</button>
       </form>
@@ -150,6 +152,7 @@
       const sketfabEmbedWrapper = document.querySelector('.sketchfab-embed-wrapper');
       const topCase = document.querySelectorAll('.top-case');
       const bottomCase = document.querySelectorAll('.bottom-case');
+      const buildCombine = document.querySelector('#build-combination');
 
       // keeb model
       if (sketfabEmbedWrapper) {
@@ -163,6 +166,7 @@
             .toLowerCase();
           code = topCaseColor + '-' + bottomCaseColor;
           sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
+          buildCombine.value = keebEmbed[code];
         });
 
         @this.on('bottomCaseChanged', bottomCaseId => {
@@ -170,6 +174,7 @@
             ' ')[0].toLowerCase();
           code = topCaseColor + '-' + bottomCaseColor;
           sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
+          buildCombine.value = keebEmbed[code];
         });
       }
     })
