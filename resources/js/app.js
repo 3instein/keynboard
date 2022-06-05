@@ -30,20 +30,6 @@ Alpine.start();
   const waitlist = document.querySelector('#waitlist');
   const waitlistForm = document.querySelector('.waitlist-form');
 
-  // build page
-  const keebEmbed = {
-    'black-black': 'https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1&camera=0',
-    'black-white': 'https://sketchfab.com/models/208db99be9664cccaa80cba18b62a157/embed?autostart=1&camera=0',
-    'white-black': 'https://sketchfab.com/models/036e8d22677f4b748ec47bdb384d2d72/embed?autostart=1&camera=0',
-    'white-white': 'https://sketchfab.com/models/6cb9185a99fa463d8b9bc72acb7d2af7/embed?autostart=1&camera=0',
-  }
-
-  const buildCode = document.querySelector('.build-code');
-  const formBuildCode = document.querySelector('.form-build-code');
-  const sketfabEmbedWrapper = document.querySelector('.sketchfab-embed-wrapper');
-  const topCase = document.querySelectorAll('.top-case');
-  const bottomCase = document.querySelectorAll('.bottom-case');
-
   // animation on window load
   window.addEventListener('load', () => {
     body.classList.remove('overflow-hidden');
@@ -113,37 +99,4 @@ Alpine.start();
   //     waitlistForm.classList.add('hidden');
   //   }
   // });
-
-  // build configuration
-  if (buildCode) {
-    buildCode.addEventListener('click', function () {
-      formBuildCode.classList.remove('hidden');
-    });
-  }
-
-  // keeb model
-  if (sketfabEmbedWrapper) {
-    // top case bottom case
-    var topCaseColor = 'black';
-    var bottomCaseColor = 'black';
-    var code = topCaseColor + '-' + bottomCaseColor;
-
-    for (let i = 0; i < topCase.length; i++) {
-      topCase[i].addEventListener('click', function () {
-        if (topCase[i].checked) {
-          topCaseColor = topCase[i].getAttribute('data-').split(' ')[0].toLowerCase();
-          code = topCaseColor + '-' + bottomCaseColor;
-          sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
-        }
-      });
-
-      bottomCase[i].addEventListener('click', function () {
-        if (bottomCase[i].checked) {
-          bottomCaseColor = bottomCase[i].getAttribute('data-').split(' ')[0].toLowerCase();
-          code = topCaseColor + '-' + bottomCaseColor;
-          sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
-        }
-      });
-    }
-  }
 })();
