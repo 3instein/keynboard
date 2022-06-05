@@ -36,7 +36,7 @@
           </div>
           <div class="flex flex-col mb-6">
             <label class="font-semibold mb-1" for="build-code">Build Code</label>
-            <input class="rounded" type="text" id="build-code" name="build-code" value="{{ $build_code }}">
+            <input class="rounded" type="text" id="build-code" name="build-code" value="{{ $build_code }}" readonly>
           </div>
           <div class="sketchfab-embed-wrapper mb-6">
             <div class="sketchfab-embed-wrapper">
