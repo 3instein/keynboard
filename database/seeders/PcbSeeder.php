@@ -18,13 +18,13 @@ class PcbSeeder extends Seeder
         Pcb::create([
             'code' => 'A',
             'name' => 'Hot-swap',
-            'price' => '60',
+            'price' => '700000',
         ]);
 
         Pcb::create([
             'code' => 'B',
             'name' => 'Soldered',
-            'price' => '50',
+            'price' => '600000',
         ]);
     }
 }

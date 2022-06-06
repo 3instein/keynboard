@@ -18,19 +18,19 @@ class PlateSeeder extends Seeder
         Plate::create([
             'code' => 'A',
             'name' => 'Aluminium',
-            'price' => '20',
+            'price' => '250000',
         ]);
 
         Plate::create([
             'code' => 'B',
             'name' => 'FR4',
-            'price' => '30',
+            'price' => '450000',
         ]);
 
         Plate::create([
             'code' => 'C',
             'name' => 'Polycarbonate',
-            'price' => '25',
+            'price' => '350000',
         ]);
     }
 }

@@ -17,22 +17,22 @@ class BottomCaseSeeder extends Seeder {
             [
                 'code' => 'A',
                 'name' => 'Black',
-                'price' => 100
+                'price' => 1000000
             ],
             [
                 'code' => 'B',
                 'name' => 'White (Frosted)',
-                'price' => 100
+                'price' => 1200000
             ],
             [
                 'code' => 'C',
                 'name' => 'Navy',
-                'price' => 100
+                'price' => 1100000
             ],
             [
                 'code' => 'D',
                 'name' => 'Silver',
-                'price' => 100
+                'price' => 1100000
             ],
         ];
 

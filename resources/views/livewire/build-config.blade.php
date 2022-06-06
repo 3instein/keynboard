@@ -117,8 +117,8 @@
             @endforeach
           </div>
         </div>
-        <p class="text-3xl font-bold mt-6">${{ $total }}.00</p>
-        <p class="font-semibold text-sm mt-1 mb-4">Estimated delivery: December 2050</p>
+        <p class="text-3xl font-bold mt-6">Rp. {{ number_format($total, 0, ',', '.') }}</p>
+        <p class="font-semibold text-sm mt-1 mb-4">Estimated delivery: December 2022</p>
         <input type="hidden" name="build-combination" id="build-combination"
           value="https://sketchfab.com/models/f9b3bb88c61940d9ab65bf90c52730cc/embed?autostart=1&camera=0" />
         <button class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold w-full text-white rounded"
