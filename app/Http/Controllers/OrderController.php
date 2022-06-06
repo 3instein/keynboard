@@ -68,10 +68,12 @@ class OrderController extends Controller
 
         $build = Build::where('code' , $request->input('build-code'))->first();
 
-        Order::create([
+        $order = Order::create([
             'user_id' => $user->id,
             'build_id' => $build->id
         ]);
+
+        return redirect()->route('order.invoice', $order);
     }
 
     /**
@@ -117,5 +119,11 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+    }
+
+    public function invoice(Order $order){
+        return view('order.invoice', [
+            'order' => $order
+        ]);
     }
 }
