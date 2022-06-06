@@ -112,7 +112,8 @@ class OrderController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy(Order $order) {
-        //
+        $order->delete();
+        return redirect()->route('home');
     }
 
     public function invoice(Order $order) {

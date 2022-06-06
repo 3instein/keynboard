@@ -27,8 +27,8 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
-            $table->string('payment_status');
-            $table->string('delivery_status');
+            $table->string('payment_status')->default('unpaid');
+            $table->string('delivery_status')->default('pending');
             $table->timestamps();
         });
     }

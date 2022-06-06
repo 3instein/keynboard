@@ -19,7 +19,7 @@ use App\Http\Controllers\InterestCheckController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 // Route::get('/build', function (){
 //     return view('build');

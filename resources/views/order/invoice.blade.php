@@ -7,7 +7,7 @@
       <div class="mb-8">
         <div class="flex justify-between items-center">
           <p class="text-xl font-bold uppercase">Order Id #{{ $order->id }}</p>
-          <p class="font-bold text-xl uppercase">Status: Unpaid</p>
+          <p class="font-bold text-xl uppercase">Status: {{ $order->payment_status }}</p>
         </div>
       </div>
 
@@ -48,7 +48,7 @@
             <p class="font-bold">Delivery Status</p>
           </div>
           <div>
-            <p>Pending</p>
+            <p class="uppercase">{{ $order->delivery_status }}</p>
           </div>
         </div>
       </div>
@@ -172,10 +172,12 @@
         </div>
       </div>
       <div class="text-right mt-8 flex justify-end items-center">
-        <form action="">
+        <form action="{{ route('order.destroy', $order) }}" method="POST">
+          @csrf
+          @method('delete')
           <button class="bg-[#EC2028] px-6 py-3 uppercase tracking-widest font-bold text-white rounded mr-8" type="submit">Cancel</button>
         </form>
-        <a class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold text-white rounded" href="">Confirm
+        <a class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold text-white rounded" href="https://wa.me/+6282335905925?text=Saya%20ingin%20mengkonfirmasi%20pembayaran%20dengan%20Invoice%20ID:%20%23{{ $order->id }}" target="_blank">Confirm
           Payment</a>
       </div>
     </div>
