@@ -24,7 +24,7 @@
             <label class="font-semibold mb-1" for="phone">Phone</label>
             <input class="rounded" type="number" id="phone" name="phone">
           </div>
-          <div class="flex flex-col mb-6">
+          <div class="flex flex-col">
             <label class="font-semibold mb-1" for="address">Address</label>
             <input class="rounded" type="text" id="address" name="address">
           </div>
@@ -36,7 +36,8 @@
           </div>
           <div class="flex flex-col mb-6">
             <label class="font-semibold mb-1" for="build-code">Build Code</label>
-            <input class="rounded" type="text" id="build-code" name="build-code" value="{{ $build_code }}" readonly>
+            <input class="rounded" type="text" id="build-code" name="build-code" value="{{ $build_code }}"
+              readonly>
           </div>
           <div class="sketchfab-embed-wrapper mb-6">
             <div class="sketchfab-embed-wrapper">
@@ -48,6 +49,7 @@
             </div>
           </div>
           <div class="text-right">
+            <p class="text-lg">Total: <span class="font-bold">Rp. {{ number_format(request()->input('total'), 0, ',', '.') }}</span></p>
             <button class="bg-base-gold px-10 py-3 uppercase tracking-widest font-bold text-white rounded"
               type="submit">Finish order</button>
           </div>
