@@ -28,6 +28,10 @@ class BuildConfig extends Component {
     public $plate = 1;
     public $pcb = 1;
 
+    public function updatedLayout() {
+        $this->emit('layoutChanged', $this->layout);
+    }
+
     public function updatedTopCase() {
         $this->emit('topCaseChanged', $this->topCase);
         $top_case = TopCase::find($this->topCase);
@@ -47,6 +51,7 @@ class BuildConfig extends Component {
     }
 
     public function updatedPlate() {
+        $this->emit('plateChanged', $this->plate);
         $plate = Plate::find($this->plate);
         $prev_plate_price = Plate::find($this->prev_plate)->price;
         $this->plate_ = $plate->name . ' - Rp. ' . number_format($plate->price, 0, ',', '.');
@@ -55,6 +60,7 @@ class BuildConfig extends Component {
     }
 
     public function updatedPcb() {
+        $this->emit('pcbChanged', $this->pcb);
         $pcb = Pcb::find($this->pcb);
         $prev_pcb_price = Pcb::find($this->prev_pcb)->price;
         $this->pcb_ = $pcb->name . ' - Rp. ' . number_format($pcb->price, 0, ',', '.');

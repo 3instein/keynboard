@@ -151,8 +151,11 @@
       const buildCode = document.querySelector('.build-code');
       const formBuildCode = document.querySelector('.form-build-code');
       const sketfabEmbedWrapper = document.querySelector('.sketchfab-embed-wrapper');
+      const layout = document.querySelector('.layout');
       const topCase = document.querySelectorAll('.top-case');
       const bottomCase = document.querySelectorAll('.bottom-case');
+      const plate = document.querySelectorAll('.plate');
+      const pcb = document.querySelectorAll('.pcb');
       const buildCombine = document.querySelector('#build-combination');
 
       // keeb model
@@ -161,6 +164,10 @@
         var topCaseColor = 'black';
         var bottomCaseColor = 'black';
         var code = topCaseColor + '-' + bottomCaseColor;
+
+        @this.on('layoutChanged', layoutId => {
+          buildCombine.value = keebEmbed[code];
+        });
 
         @this.on('topCaseChanged', topCaseId => {
           topCaseColor = document.getElementById('top-case-' + topCaseId).getAttribute('data-').split(' ')[0]
@@ -175,6 +182,14 @@
             ' ')[0].toLowerCase();
           code = topCaseColor + '-' + bottomCaseColor;
           sketfabEmbedWrapper.querySelector('iframe').src = keebEmbed[code];
+          buildCombine.value = keebEmbed[code];
+        });
+
+        @this.on('plateChanged', plateId => {
+          buildCombine.value = keebEmbed[code];
+        });
+
+        @this.on('pcbChanged', pcbId => {
           buildCombine.value = keebEmbed[code];
         });
       }

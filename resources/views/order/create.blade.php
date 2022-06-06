@@ -32,7 +32,7 @@
         <div>
           <div class="mb-6">
             <p class="text-3xl font-bold">Your build</p>
-            <p class="text-gray-500">This information will be save when you confirm your order.</p>
+            <p class="text-gray-500">This preview will be save when you confirm your order.</p>
           </div>
           <div class="flex flex-col mb-6">
             <label class="font-semibold mb-1" for="build-code">Build Code</label>
@@ -49,10 +49,13 @@
             </div>
           </div>
           <div class="text-right">
-            <p class="text-lg">Total: <span class="font-bold">Rp. {{ number_format(request()->input('total'), 0, ',', '.') }}</span></p>
-            <input type="hidden" name="total" value="{{ request()->input('total') }}">
-            <button class="bg-base-gold px-10 py-3 uppercase tracking-widest font-bold text-white rounded"
-              type="submit">Finish order</button>
+            <p class="text-lg">Total: <span class="font-bold">Rp.
+                {{ number_format(request()->input('total'), 0, ',', '.') }}</span></p>
+            <div class="grid grid-cols-2">
+              <a class="bg-red-600 text-center py-3 uppercase tracking-widest font-bold text-white rounded mr-4" href="{{ route('build.index') }}">Cancel</a>
+              <button class="bg-base-gold py-3 uppercase tracking-widest font-bold text-white rounded"
+                type="submit">Finish order</button>
+            </div>
           </div>
         </div>
       </div>
