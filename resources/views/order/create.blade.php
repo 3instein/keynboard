@@ -50,6 +50,7 @@
           </div>
           <div class="text-right">
             <p class="text-lg">Total: <span class="font-bold">Rp. {{ number_format(request()->input('total'), 0, ',', '.') }}</span></p>
+            <input type="hidden" name="total" value="{{ request()->input('total') }}">
             <button class="bg-base-gold px-10 py-3 uppercase tracking-widest font-bold text-white rounded"
               type="submit">Finish order</button>
           </div>

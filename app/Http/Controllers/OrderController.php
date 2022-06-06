@@ -13,15 +13,13 @@ use App\Models\BottomCase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class OrderController extends Controller
-{
+class OrderController extends Controller {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
     }
 
@@ -30,21 +28,20 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
-    {
+    public function create(Request $request) {
         $layout = Layout::find($request->input('layout'));
         $top_case = TopCase::find($request->input('top_case'));
         $bottom_case = BottomCase::find($request->input('bottom_case'));
         $plate = Plate::find($request->input('plate'));
         $pcb = Pcb::find($request->input('pcb'));
 
-        $build_code = $layout->code . 
-                    $top_case->code . 
-                    $bottom_case->code . 
-                    $plate->code . 
-                    $pcb->code;
+        $build_code = $layout->code .
+            $top_case->code .
+            $bottom_case->code .
+            $plate->code .
+            $pcb->code;
 
-        return view('order.create',[
+        return view('order.create', [
             'build_code' => $build_code,
         ]);
     }
@@ -55,9 +52,8 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-
+    public function store(Request $request) {
+        $total = $request->input('total');
         $user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
@@ -66,14 +62,16 @@ class OrderController extends Controller
             'address' => $request->input('address'),
         ]);
 
-        $build = Build::where('code' , $request->input('build-code'))->first();
+        $build = Build::where('code', $request->input('build-code'))->first();
 
         $order = Order::create([
             'user_id' => $user->id,
             'build_id' => $build->id
         ]);
 
-        return redirect()->route('order.invoice', $order);
+        return redirect()->route('order.invoice', [
+            'order' => $order,
+        ]);
     }
 
     /**
@@ -82,8 +80,7 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
-    {
+    public function show(Order $order) {
         //
     }
 
@@ -93,8 +90,7 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
-    {
+    public function edit(Order $order) {
         //
     }
 
@@ -105,8 +101,7 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
-    {
+    public function update(Request $request, Order $order) {
         //
     }
 
@@ -116,12 +111,11 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
-    {
+    public function destroy(Order $order) {
         //
     }
 
-    public function invoice(Order $order){
+    public function invoice(Order $order) {
         return view('order.invoice', [
             'order' => $order
         ]);

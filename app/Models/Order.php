@@ -15,4 +15,8 @@ class Order extends Model
     public function build(){
         return $this->belongsTo(Build::class);
     }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
