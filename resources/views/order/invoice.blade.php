@@ -171,6 +171,7 @@
           </div>
         </div>
       </div>
+      @if($order->payment_status == 'unpaid')
       <div class="text-right mt-8 flex justify-end items-center">
         <button class="bg-red-600 px-6 py-3 uppercase tracking-widest font-bold text-white rounded mr-8"
           id="cancel-payment">Cancel</button>
@@ -179,6 +180,7 @@
           target="_blank">Confirm
           Payment</a>
       </div>
+      @endif
     </div>
   </div>
 
@@ -208,18 +210,18 @@
               </div>
             </div>
           </div>
-          <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-            <form action="{{ route('order.destroy', $order) }}" method="POST">
-              @csrf
-              @method('delete')
-              <button
-                class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-white font-medium hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
-                type="submit">Cancel
-                Order</button>
-            </form>
-            <button type="button" id="cancel-btn"
-              class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Back</button>
-          </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <form action="{{ route('order.destroy', $order) }}" method="POST">
+                @csrf
+                @method('delete')
+                <button
+                  class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-white font-medium hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+                  type="submit">Cancel
+                  Order</button>
+              </form>
+              <button type="button" id="cancel-btn"
+                class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Back</button>
+            </div>
         </div>
       </div>
     </div>

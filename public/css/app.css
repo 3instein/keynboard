@@ -997,21 +997,21 @@ select {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
+.mx-60 {
+  margin-left: 15rem;
+  margin-right: 15rem;
 }
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-.mx-60 {
-  margin-left: 15rem;
-  margin-right: 15rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1605,10 +1605,6 @@ select {
 .bg-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
-}
-.bg-\[\#EC2028\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 32 40 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
