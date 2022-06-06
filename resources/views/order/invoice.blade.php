@@ -1,5 +1,5 @@
 <x-app-layout>
-  <div class="mt-20 mx-20">
+  <div class="mt-20 mx-60">
     <div class="w-full text-center mb-10">
       <p class="uppercase text-3xl font-bold">Order Invoice</p>
     </div>

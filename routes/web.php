@@ -29,6 +29,7 @@ Route::resource('build', BuildController::class);
 Route::resource('order', OrderController::class)->except(['create']);
 Route::post('/order/create', [OrderController::class, 'create'])->name('order.create');
 Route::get('/order/{order}', [OrderController::class, 'invoice'])->name('order.invoice');
+Route::post('/order/track', [OrderController::class, 'track'])->name('order.track');
 Route::resource('interest-check', InterestCheckController::class);
 Route::post('/build', [BuildController::class, 'load'])->name('build.load');
 

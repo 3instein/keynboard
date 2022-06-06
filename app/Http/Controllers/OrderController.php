@@ -69,9 +69,7 @@ class OrderController extends Controller {
             'build_id' => $build->id
         ]);
 
-        return redirect()->route('order.invoice', [
-            'order' => $order,
-        ]);
+        return redirect()->route('order.invoice', $order);
     }
 
     /**
@@ -120,5 +118,18 @@ class OrderController extends Controller {
         return view('order.invoice', [
             'order' => $order
         ]);
+    }
+
+    /**
+     * Track invoice of user
+     * 
+     * @param \Illuminate\Http\Request  $request
+     * @return function invoice
+     */
+    public function track(Request $request) {
+        $email = $request->input('email');
+        $user = User::where('email', $email)->first();
+
+        return redirect()->route('order.invoice', $user->orders->first());
     }
 }

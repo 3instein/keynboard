@@ -24,6 +24,25 @@
     </div>
   </section>
 
+  {{-- track order --}}
+  <section name="about-us">
+    <div class="text-center py-20 bg-slate-100 bg-opacity-30">
+      <div class="grid place-items-center">
+        <div class="border-b-2 border-b-base">
+          <p class="text-3xl uppercase text-base tracking-widest font-extrabold mb-4">Track your order</p>
+        </div>
+        <div class="mt-8">
+          <form action="{{ route('order.track') }}" method="POST">
+            @csrf
+            <input class="rounded" type="email" name="email" id="email" placeholder="Enter your email..." />
+            <button class="bg-base-gold py-[10px] px-6 uppercase tracking-widest font-bold text-white rounded"
+              type="submit">Track</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   {{-- about us --}}
   <section name="about-us">
     <div class="text-center py-20 bg-slate-100 bg-opacity-30">
@@ -44,7 +63,7 @@
 
   {{-- Kit section --}}
   <section name="spesification">
-    <div class="grid place-items-center my-40">
+    <div class="grid place-items-center mb-40 mt-20">
       <div class="flex items-center justify-center">
         <div class="mr-48">
           <img class="h-auto w-96" src="/images/keeb1.png" alt="keeb1">
