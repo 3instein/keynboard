@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
             PlateSeeder::class,
             PcbSeeder::class,
             BuildSeeder::class,
+            AnalyticSeeder::class
         ]);
     }
 }

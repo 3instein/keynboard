@@ -12,7 +12,7 @@
                 keyboard</p>
             </caption>
           </div>
-          @include('components.cta-btn')
+          @livewire('cta-btn')
         </div>
         <div class="absolute -top-48 right-24 keeb-hero-2 rotate-45">
           <img class="h-auto w-[1280px]" src="/images/keeb-hero2.png" alt="keeb2">
@@ -129,7 +129,7 @@
           </div>
         </div>
       </div>
-      @include('components.cta-btn')
+      @livewire('cta-btn')
     </div>
   </section>
 </x-app-layout>

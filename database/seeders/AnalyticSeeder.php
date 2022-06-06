@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Analytic;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class AnalyticSeeder extends Seeder
 {
@@ -14,6 +15,8 @@ class AnalyticSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Analytic::create([
+            'cta_counter' => 0
+        ]);
     }
 }
