@@ -52,7 +52,7 @@
             <p class="text-lg">Total: <span class="font-bold">Rp.
                 {{ number_format(request()->input('total'), 0, ',', '.') }}</span></p>
             <div class="grid grid-cols-2">
-              <a class="bg-red-600 text-center py-3 uppercase tracking-widest font-bold text-white rounded mr-4" href="{{ route('build.index') }}">Cancel</a>
+              <a class="bg-red-600 text-center py-3 uppercase tracking-widest font-bold text-white rounded mr-4" href="{{ route('build.index') }}">Back</a>
               <button class="bg-base-gold py-3 uppercase tracking-widest font-bold text-white rounded"
                 type="submit">Finish order</button>
             </div>

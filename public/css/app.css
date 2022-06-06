@@ -1009,14 +1009,6 @@ select {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-.my-40 {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-}
-.mx-40 {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
 .mx-60 {
   margin-left: 15rem;
   margin-right: 15rem;
@@ -1129,6 +1121,9 @@ select {
 .mr-8 {
   margin-right: 2rem;
 }
+.mb-40 {
+  margin-bottom: 10rem;
+}
 .mr-48 {
   margin-right: 12rem;
 }
@@ -1143,9 +1138,6 @@ select {
 }
 .mt-12 {
   margin-top: 3rem;
-}
-.mb-40 {
-  margin-bottom: 10rem;
 }
 .block {
   display: block;
@@ -1602,10 +1594,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-.bg-\[\#EC2028\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 32 40 / var(--tw-bg-opacity));
-}
 .bg-base-gold {
   --tw-bg-opacity: 1;
   background-color: rgb(245 191 138 / var(--tw-bg-opacity));
@@ -1617,6 +1605,10 @@ select {
 .bg-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+}
+.bg-\[\#EC2028\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 32 40 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -2416,9 +2408,34 @@ select {
 }
 @media (prefers-color-scheme: dark) {
 
+  .dark\:border-gray-700 {
+    --tw-border-opacity: 1;
+    border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  }
+
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 640px) {
@@ -2471,6 +2488,10 @@ select {
     margin-left: 1.5rem;
   }
 
+  .sm\:ml-0 {
+    margin-left: 0px;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -2485,6 +2506,10 @@ select {
 
   .sm\:h-10 {
     height: 2.5rem;
+  }
+
+  .sm\:h-20 {
+    height: 5rem;
   }
 
   .sm\:w-10 {
@@ -2621,6 +2646,10 @@ select {
 
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:text-right {
+    text-align: right;
   }
 
   .sm\:text-sm {
