@@ -180,6 +180,12 @@
           target="_blank">Confirm
           Payment</a>
       </div>
+      @else
+      <div class="text-right mt-8 flex justify-end items-center">
+        <a class="bg-base-gold px-6 py-3 uppercase tracking-widest font-bold text-white rounded"
+          href="https://wa.me/+6282335905925?text=Saya%20ingin%20bertanya%20mengenai%20pesanan%20dengan%20Invoice%20ID:%20%23{{ $order->id }}"
+          target="_blank">Contact Us</a>
+      </div>
       @endif
     </div>
   </div>
